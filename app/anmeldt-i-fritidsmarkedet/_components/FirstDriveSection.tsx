@@ -2,10 +2,10 @@ export default function FirstDriveSection() {
   return (
     <section className="bg-white px-4 py-16 lg:px-8">
       <div className="mx-auto max-w-[680px]">
-        <h3 className="h3-display text-ink-primary">
+        <h3 className="section-heading--small text-ink-primary">
           Klippebanerne var rene fra første tur
         </h3>
-        <p className="mt-6 text-[17px] leading-relaxed text-ink-primary">
+        <p className="text-[17px] leading-relaxed text-ink-primary">
           Da X5 blev sat i drift første gang, var de tekniske styrker
           ifølge anmeldelsen tydelige med det samme. Klippebanerne var
           rene og ensartede uden uregelmæssigheder. Robotten holdt lige

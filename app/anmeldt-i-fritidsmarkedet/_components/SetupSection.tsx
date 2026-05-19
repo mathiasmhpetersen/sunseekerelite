@@ -2,10 +2,10 @@ export default function SetupSection() {
   return (
     <section className="bg-white px-4 py-16 lg:px-8">
       <div className="mx-auto max-w-[680px]">
-        <h3 className="h3-display text-ink-primary">
+        <h3 className="section-heading--small text-ink-primary">
           Opsætning under én time, uden afgrænsningskabler
         </h3>
-        <p className="mt-6 text-[17px] leading-relaxed text-ink-primary">
+        <p className="text-[17px] leading-relaxed text-ink-primary">
           Et af de aspekter, anmeldelsen fremhæver mest, er den kabelfri
           opsætning. Hvor ældre generationer af robotplæneklippere
           kræver fysiske afgrænsningskabler nedgravet i plænen, bruger

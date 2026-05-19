@@ -2,10 +2,10 @@ export default function VerdictSection() {
   return (
     <section className="bg-white px-4 py-16 lg:px-8">
       <div className="mx-auto max-w-[680px]">
-        <h3 className="h3-display text-ink-primary">
+        <h3 className="section-heading--small text-ink-primary">
           Anmeldelsens konklusion: 9,5 / 10
         </h3>
-        <p className="mt-6 text-[17px] leading-relaxed text-ink-primary">
+        <p className="text-[17px] leading-relaxed text-ink-primary">
           Fritidsmarkedet beskriver X5 som et skift fra reaktiv
           plænevedligeholdelse til proaktiv græsforvaltning. Robotten
           kombinerer ifølge anmeldelsen avanceret kabelfri navigation,
