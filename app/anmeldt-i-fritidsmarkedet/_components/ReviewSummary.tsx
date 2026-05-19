@@ -1,19 +1,19 @@
 const points: { title: string; body: string }[] = [
   {
-    title: "Kabelfri opsætning under én time.",
-    body: "AONavi-systemet kombinerer RTK-GNSS og VSLAM, så plænen kortlægges via app uden afgrænsningskabler.",
+    title: "Opsætningen tog under én time.",
+    body: "RTK-antennen blev sat op, og plænen blev kortlagt ved at køre X5 rundt om området én gang via appen. Ingen afgrænsningskabler.",
   },
   {
-    title: "Vision AI registrerer over 200 objekttyper.",
-    body: "I testen identificerede plæneklipperen blandt andet et tyggelegetøj efterladt på plænen.",
+    title: "Vision AI undgik et tyggelegetøj.",
+    body: "Et legetøj efterladt på plænen blev genkendt og undgået. Systemet kan ifølge anmeldelsen identificere over 200 objekttyper.",
   },
   {
-    title: "Ride-on-Edge kantklipning.",
-    body: "X5 trimmer helt op til kanter og hegn, så der ikke står uklippede strimler tilbage.",
+    title: "Klippebanerne var rene og ensartede.",
+    body: "Selv på milde skråninger holdt X5 lige linjer. Floating Cut System justerede klippehøjden midt på ruten og minimerede skalpering på ujævne overflader.",
   },
   {
-    title: "Floating Cut System.",
-    body: "Klippehøjden justeres midt på ruten, hvilket minimerer skalpering på ujævne overflader.",
+    title: "Da det begyndte at regne, kørte den hjem.",
+    body: "Midt i en session opdagede X5 regnen, vendte tilbage til ladestationen og fortsatte, hvor den slap, da vejret var bedre.",
   },
 ];
 
@@ -33,12 +33,13 @@ export default function ReviewSummary() {
     <section className="bg-white px-4 pt-24 lg:px-8">
       <div className="mx-auto max-w-[680px]">
         <h2 className="h2-display text-ink-primary">
-          Derfor fremhæver Fritidsmarkedet X5
+          Det fremhæver Fritidsmarkedet i testen
         </h2>
         <p className="mt-6 text-[17px] leading-relaxed text-ink-primary">
-          I testen blev X5 sat op på en almindelig dansk plæne på 1.700 m²
-          med skråninger, skyggefulde områder og forhindringer som
-          bålplads og grøntsagsbed. Anmeldelsen peger på fire elementer:
+          Testplænen var hverken flad eller åben. 1.700 m² med skråninger,
+          skyggefulde områder, bålplads og grøntsagsbed — det, anmeldelsen
+          kalder en „rigtig” dansk plæne. Fire ting trækker Fritidsmarkedet
+          frem efter testperioden:
         </p>
 
         <ul className="mt-8 space-y-6">

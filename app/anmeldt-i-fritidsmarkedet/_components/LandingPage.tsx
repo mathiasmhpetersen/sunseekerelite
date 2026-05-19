@@ -22,7 +22,7 @@ export default function LandingPage() {
 
       <div className="bg-white pt-12 lg:pt-16">
         <Quote
-          eyebrow="FRITIDSMARKEDET OM SUNSEEKER ELITE X5"
+          eyebrow="FRA ANMELDELSEN"
           quote="Jeg plejede at være lidt flov over, hvor ujævn min græsplæne så ud."
           attribution="Fritidsmarkedet, anmeldelse maj 2025"
         />
