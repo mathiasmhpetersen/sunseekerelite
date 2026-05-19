@@ -13,6 +13,9 @@ import Gen2Section from "./Gen2Section";
 import FinalCta from "./FinalCta";
 import Disclaimer from "./Disclaimer";
 import SiteFooter from "./SiteFooter";
+import SoftCta from "./SoftCta";
+
+const GEN2_URL = "https://sunseekerelite.com/dk/x-gen-2-series";
 
 export default function LandingPage() {
   return (
@@ -26,6 +29,8 @@ export default function LandingPage() {
       <SetupSection />
       <FirstDriveSection />
 
+      <SoftCta href={GEN2_URL}>Læs mere om X5 Gen 2</SoftCta>
+
       <Quote
         eyebrow="FRA ANMELDELSEN"
         quote="Jeg plejede at være lidt flov over, hvor ujævn min græsplæne så ud."
@@ -34,8 +39,13 @@ export default function LandingPage() {
 
       <IntegrationSection />
       <StatsGrid />
+
+      <SoftCta href={GEN2_URL}>Se X Gen 2-serien</SoftCta>
+
       <WhereItFitsSection />
       <VerdictSection />
+
+      <SoftCta href={GEN2_URL}>Sammenlign X Gen 2-modellerne</SoftCta>
 
       <Gen2Section />
       <FinalCta />
