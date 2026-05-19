@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-orange-dark: #ff5016;
+  --brand-orange-light: #ff9a16;
+  --brand-black: #000000;
+  --brand-white: #ffffff;
+  --brand-bg-light: #ffffff;
+  --brand-bg-dark: #0a0a0a;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6b6b6b;
+  --text-on-dark: #ffffff;
+  --border-subtle: #e5e5e5;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "ss01";
+}
+
+body {
+  background: var(--brand-bg-light);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cta-primary {
+  background: linear-gradient(90deg, #ff5016 0%, #ff9a16 100%);
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 14px 32px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  line-height: 1;
+}
+.cta-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(255, 80, 22, 0.3);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  text-decoration: none;
+  line-height: 1;
+}
+.cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
