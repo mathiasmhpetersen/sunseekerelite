@@ -10,7 +10,7 @@ export default function HeroImage() {
         >
           <div className="relative h-[320px] w-full sm:h-[420px] lg:h-[480px]">
             <Image
-              src="/sunseeker/fritidsmarkedet-article-hero.webp"
+              src="/sunseeker/fritidsmarkedet-article-hero.png"
               alt="Sunseeker Elite X5 anmeldt i Fritidsmarkedet"
               fill
               priority
