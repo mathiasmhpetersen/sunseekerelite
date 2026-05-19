@@ -10,8 +10,8 @@ export default function HeroImage() {
         >
           <div className="relative h-[320px] w-full sm:h-[420px] lg:h-[480px]">
             <Image
-              src="/sunseeker/new-home-banner-x5-image.png"
-              alt="Sunseeker Elite X5 på en dansk plæne"
+              src="/sunseeker/fritidsmarkedet-article-hero.webp"
+              alt="Sunseeker Elite X5 anmeldt i Fritidsmarkedet"
               fill
               priority
               sizes="(max-width: 760px) 100vw, 760px"
