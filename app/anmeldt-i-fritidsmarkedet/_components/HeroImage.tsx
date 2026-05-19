@@ -20,9 +20,9 @@ export default function HeroImage() {
           </div>
         </div>
         <div className="mt-4 flex justify-center">
-          <span className="inline-flex items-center gap-2 rounded-full bg-bg-stat px-4 py-2 text-[13px] font-medium text-ink-primary">
+          <span className="inline-flex items-center gap-2 rounded-full bg-bg-stat px-4 py-2 text-[13px] font-semibold text-ink-primary">
             <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-brand-orange-dark" />
-            Testet af Fritidsmarkedet · 1.700 m² plæne · maj 2025
+            Fritidsmarkedet · maj 2025
           </span>
         </div>
       </div>

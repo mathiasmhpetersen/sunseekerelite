@@ -1,23 +1,23 @@
 const upgrades: { title: string; body: string }[] = [
   {
     title: "AONavi™ 2.0",
-    body: "Network RTK + VSLAM 2.0 med 4G-GPS. Antennefri opsætning.",
+    body: "Network RTK + VSLAM 2.0 med 4G-GPS.",
   },
   {
     title: "Vision AI 2.0",
-    body: "Dag- og nattedrift med iToF-kamera.",
+    body: "iToF-kamera til dag- og nattedrift.",
   },
   {
     title: "10 TOPS AI-chip",
     body: "dobbelt så hurtig behandling som Gen 1.",
   },
   {
-    title: "Kortlægning op til 6000 m²",
-    body: "uden afgrænsningskabler.",
+    title: "Op til 6000 m²",
+    body: "kortlægning uden afgrænsningskabler.",
   },
   {
     title: "Tre modeller",
-    body: "X3 Gen 2, X5 Gen 2 og X7 Gen 2 / X7 Gen 2 Plus.",
+    body: "X3, X5 og X7 / X7 Plus.",
   },
 ];
 
@@ -26,13 +26,12 @@ export default function Gen2Section() {
     <section className="bg-white px-4 py-20 lg:px-8">
       <div className="mx-auto max-w-[680px]">
         <h3 className="h3-display text-ink-primary">
-          Den anmeldte X5 er Gen 1 — Sunseeker Elite X Gen 2 er nu ude
+          En ny generation: Sunseeker Elite X Gen 2
         </h3>
         <p className="mt-6 text-[17px] leading-relaxed text-ink-primary">
-          Anmeldelsen fra Fritidsmarkedet dækker første generation af X5. I
-          2026 lancerede Sunseeker Elite næste generation af serien — X Gen 2
-          — der bygger videre på det fundament, Fritidsmarkedet roste, og
-          introducerer:
+          Den anmeldte X5 er første generation. I 2026 lancerede Sunseeker
+          Elite næste generation af serien — X Gen 2 — der bygger videre på
+          det samme grundsystem og tilføjer:
         </p>
 
         <ul className="mt-6 space-y-4">
@@ -45,9 +44,8 @@ export default function Gen2Section() {
         </ul>
 
         <p className="mt-6 text-[17px] leading-relaxed text-ink-primary">
-          For dig der overvejede X5 efter at have læst anmeldelsen, er X Gen
-          2-serien det naturlige skridt videre — samme fundament, men med
-          næste generations teknologi.
+          Anmeldelsen i Fritidsmarkedet dækker Gen 1. X Gen 2 er den nye
+          serie i samme produktfamilie.
         </p>
       </div>
     </section>
