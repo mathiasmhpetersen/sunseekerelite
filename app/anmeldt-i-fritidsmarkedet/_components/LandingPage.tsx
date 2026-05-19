@@ -3,8 +3,9 @@ import MainNav from "./MainNav";
 import SubNav from "./SubNav";
 import ArticleHero from "./ArticleHero";
 import HeroImage from "./HeroImage";
-import WhyFeatured from "./WhyFeatured";
+import ReviewSummary from "./ReviewSummary";
 import Quote from "./Quote";
+import VideoEmbed from "./VideoEmbed";
 import CtaButton from "./CtaButton";
 import StatsGrid from "./StatsGrid";
 import Gen2Section from "./Gen2Section";
@@ -21,15 +22,23 @@ export default function LandingPage() {
 
       <ArticleHero />
       <HeroImage />
-      <WhyFeatured />
+      <ReviewSummary />
 
-      <Quote
-        label="Fritidsmarkedet om Sunseeker Elite X5:"
-        quote="Sunseeker Elite X5 repræsenterer et skift fra reaktiv plænevedligeholdelse til proaktiv græsforvaltning."
-        attribution="Fritidsmarkedet, anmeldelse maj 2025"
-      />
+      <div className="bg-white pt-12 lg:pt-16">
+        <Quote
+          quote="Jeg plejede at være lidt flov over, hvor ujævn min græsplæne så ud."
+          attribution="Fritidsmarkedet, anmeldelse af Sunseeker Elite X5"
+        />
+      </div>
 
-      <div className="bg-white px-4 py-12 lg:px-8 lg:py-16">
+      <div className="bg-white pt-12 lg:pt-16">
+        <VideoEmbed
+          src="/sunseeker/AONavi-Positioning-and-Navigation-System-1.mp4"
+          caption="AONavi-systemet kortlægger plænen via RTK-GNSS og VSLAM — uden afgrænsningskabler."
+        />
+      </div>
+
+      <div className="bg-white px-4 py-12 lg:px-8">
         <div className="flex justify-center">
           <CtaButton href="https://sunseekerelite.com/dk/x-gen-2-series" size="lg">
             Se Sunseeker Elite X Gen 2 →
@@ -38,14 +47,14 @@ export default function LandingPage() {
       </div>
 
       <div className="bg-white px-4 lg:px-8">
-        <hr className="mx-auto max-w-content border-t border-[--border-subtle]" />
+        <hr className="mx-auto max-w-[680px] border-t border-line-subtle" />
       </div>
 
       <StatsGrid />
 
-      <Quote
-        quote="Jeg plejede at være lidt flov over, hvor ujævn min græsplæne så ud. Nu ser den ud, som om jeg har hyret en professionel."
-        attribution="Fra anmeldelsen i Fritidsmarkedet"
+      <VideoEmbed
+        src="/sunseeker/Obstacle-Avoidance.mp4"
+        caption="Vision AI identificerer og navigerer uden om mere end 200 objekttyper."
       />
 
       <Gen2Section />
