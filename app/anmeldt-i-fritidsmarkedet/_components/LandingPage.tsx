@@ -1,4 +1,3 @@
-import TopBanner from "./TopBanner";
 import MainNav from "./MainNav";
 import ArticleHero from "./ArticleHero";
 import HeroImage from "./HeroImage";
@@ -14,7 +13,6 @@ import SiteFooter from "./SiteFooter";
 export default function LandingPage() {
   return (
     <main>
-      <TopBanner />
       <MainNav />
 
       <ArticleHero />
