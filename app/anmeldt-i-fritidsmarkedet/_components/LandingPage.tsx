@@ -1,11 +1,14 @@
 import MainNav from "./MainNav";
 import ArticleHero from "./ArticleHero";
 import HeroImage from "./HeroImage";
-import ReviewSummary from "./ReviewSummary";
+import IntroLede from "./IntroLede";
+import SetupSection from "./SetupSection";
+import FirstDriveSection from "./FirstDriveSection";
 import Quote from "./Quote";
-import CtaButton from "./CtaButton";
+import IntegrationSection from "./IntegrationSection";
 import StatsGrid from "./StatsGrid";
-import HonestLimitation from "./HonestLimitation";
+import WhereItFitsSection from "./WhereItFitsSection";
+import VerdictSection from "./VerdictSection";
 import Gen2Section from "./Gen2Section";
 import FinalCta from "./FinalCta";
 import Disclaimer from "./Disclaimer";
@@ -18,30 +21,22 @@ export default function LandingPage() {
 
       <ArticleHero />
       <HeroImage />
-      <ReviewSummary />
 
-      <div className="bg-white pt-12 lg:pt-16">
-        <Quote
-          eyebrow="FRA ANMELDELSEN"
-          quote="Jeg plejede at være lidt flov over, hvor ujævn min græsplæne så ud."
-          attribution="Fritidsmarkedet, anmeldelse maj 2025"
-        />
-      </div>
+      <IntroLede />
+      <SetupSection />
+      <FirstDriveSection />
 
-      <div className="bg-white px-4 py-12 lg:px-8">
-        <div className="flex justify-center">
-          <CtaButton href="https://sunseekerelite.com/dk/x-gen-2-series" size="lg">
-            Se Sunseeker Elite X Gen 2 →
-          </CtaButton>
-        </div>
-      </div>
+      <Quote
+        eyebrow="FRA ANMELDELSEN"
+        quote="Jeg plejede at være lidt flov over, hvor ujævn min græsplæne så ud."
+        attribution="Fritidsmarkedet, anmeldelse af Sunseeker Elite X5"
+      />
 
-      <div className="bg-white px-4 lg:px-8">
-        <hr className="mx-auto max-w-[680px] border-t border-line-subtle" />
-      </div>
-
+      <IntegrationSection />
       <StatsGrid />
-      <HonestLimitation />
+      <WhereItFitsSection />
+      <VerdictSection />
+
       <Gen2Section />
       <FinalCta />
       <Disclaimer />
