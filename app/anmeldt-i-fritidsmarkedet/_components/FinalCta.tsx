@@ -1,35 +1,32 @@
-import CtaButton from "./CtaButton";
+import Link from "next/link";
 
 export default function FinalCta() {
   return (
-    <section className="w-full bg-[#0a0a0a] text-white">
-      <div className="mx-auto max-w-[720px] px-6 py-20 text-center">
-        <h2
-          className="mx-auto max-w-[560px] font-extrabold text-white"
-          style={{
-            fontSize: "clamp(1.875rem, 3vw, 2.5rem)",
-            letterSpacing: "-0.02em",
-            lineHeight: 1.1,
-            textWrap: "balance",
-          }}
-        >
-          Se Sunseeker Elite X Gen 2
-        </h2>
-        <p className="mx-auto mt-4 max-w-[480px] text-[17px] leading-relaxed text-white/70">
+    <section className="final-cta">
+      <div className="final-cta__inner">
+        <h2 className="final-cta__title">Se Sunseeker Elite X Gen 2</h2>
+        <p className="final-cta__body">
           Tre modeller. Plæner fra små haver til 6000 m². Ledningsfri og
           antennefri opsætning.
         </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <CtaButton href="https://sunseekerelite.com/dk/x-gen-2-series" size="lg">
-            Se serien →
-          </CtaButton>
-          <CtaButton
-            href="https://www.fritidsmarkedet.dk/artikel/127709-min-maalte-erfaring-med-sunseeker-elite-x5-en-paalidelig-robotplaneklipper-til-rigtige-grasplaner"
-            variant="secondary"
-            size="lg"
+
+        <div className="final-cta__actions">
+          <Link
+            className="final-cta__primary"
+            href="https://sunseekerelite.com/dk/x-gen-2-series"
           >
-            Læs anmeldelsen i Fritidsmarkedet
-          </CtaButton>
+            Se serien
+            <span className="final-cta__arrow" aria-hidden>
+              →
+            </span>
+          </Link>
+
+          <Link
+            className="final-cta__secondary"
+            href="https://www.fritidsmarkedet.dk/artikel/127709-min-maalte-erfaring-med-sunseeker-elite-x5-en-paalidelig-robotplaneklipper-til-rigtige-grasplaner"
+          >
+            Læs hele anmeldelsen i Fritidsmarkedet →
+          </Link>
         </div>
       </div>
     </section>
