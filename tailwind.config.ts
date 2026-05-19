@@ -8,15 +8,20 @@ const config: Config = {
         brand: {
           "orange-dark": "#ff5016",
           "orange-light": "#ff9a16",
-          black: "#000000",
-          "bg-dark": "#0a0a0a",
+          black: "#0a0a0a",
         },
-        text: {
-          primary: "#1a1a1a",
+        bg: {
+          default: "#ffffff",
+          cream: "#fff7ec",
+          stat: "#f2efe7",
+        },
+        ink: {
+          primary: "#0a0a0a",
           secondary: "#6b6b6b",
+          tertiary: "#9a9a9a",
         },
-        border: {
-          subtle: "#e5e5e5",
+        line: {
+          subtle: "#ececec",
         },
       },
       fontFamily: {
@@ -24,11 +29,12 @@ const config: Config = {
       },
       maxWidth: {
         content: "1200px",
-        prose: "720px",
+        wide: "1080px",
+        prose: "680px",
+        hero: "760px",
       },
       backgroundImage: {
-        "brand-gradient":
-          "linear-gradient(90deg, #ff5016 0%, #ff9a16 100%)",
+        "brand-gradient": "linear-gradient(90deg, #ff5016 0%, #ff9a16 100%)",
       },
     },
   },

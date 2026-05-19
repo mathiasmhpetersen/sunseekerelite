@@ -1,38 +1,43 @@
 const stats: { value: string; label: string }[] = [
-  { value: "30°", label: "skråninger håndteret uden problemer" },
+  { value: "30°", label: "skråninger håndteret i testen" },
   { value: "200+", label: "objekttyper genkendt af Vision AI" },
-  { value: "9,5 / 10", label: "bedømmelse fra Fritidsmarkedet" },
+  { value: "9,5 / 10", label: "samlet bedømmelse fra Fritidsmarkedet" },
 ];
 
 export default function StatsGrid() {
   return (
-    <section className="bg-white px-4 py-16 lg:px-8 lg:py-20">
-      <div className="mx-auto max-w-prose">
-        <h2 className="text-balance text-3xl font-bold leading-tight text-[--text-primary] sm:text-4xl" style={{ letterSpacing: "-0.02em" }}>
-          Hvorfor danske plæner kræver mere end en standard robotplæneklipper
-        </h2>
-        <p className="mt-6 text-lg leading-relaxed text-[--text-secondary]">
-          Anmeldelsen blev udført på en typisk dansk plæne på 1.700 m² med
-          skråninger, skyggefulde områder og forhindringer som bålplads og
-          grøntsagsbed. Resultatet bekræfter, at moderne robotplæneklippere
-          kan håndtere kompleksitet, hvor ældre modeller gav op.
-        </p>
-      </div>
+    <section className="bg-white px-4 py-16 lg:px-8">
+      <div className="mx-auto max-w-wide">
+        <div className="max-w-[680px]">
+          <h2 className="h2-display text-ink-primary">Tre tal fra testen</h2>
+          <p className="mt-5 max-w-[600px] text-[17px] leading-relaxed text-ink-secondary">
+            Fritidsmarkedet testede X5 over en periode på en 1.700 m² plæne.
+            Disse tre tal opsummerer, hvad robotten leverede.
+          </p>
+        </div>
 
-      <div className="mx-auto mt-10 grid max-w-content gap-4 sm:grid-cols-3">
-        {stats.map((s) => (
-          <div
-            key={s.label}
-            className="rounded-xl bg-[#F0EDE4] p-6 text-center"
-          >
-            <div className="text-[44px] font-bold leading-none tracking-tight text-[--text-primary] sm:text-5xl">
-              {s.value}
+        <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {stats.map((s) => (
+            <div
+              key={s.label}
+              className="rounded-2xl bg-bg-stat px-6 py-8 text-center"
+            >
+              <div
+                className="font-extrabold text-ink-primary"
+                style={{
+                  fontSize: "clamp(2.5rem, 5vw, 3.5rem)",
+                  letterSpacing: "-0.03em",
+                  lineHeight: 1,
+                }}
+              >
+                {s.value}
+              </div>
+              <div className="mt-4 text-[14px] font-medium text-ink-secondary">
+                {s.label}
+              </div>
             </div>
-            <div className="mt-3 text-sm italic text-[--text-secondary]">
-              {s.label}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   );

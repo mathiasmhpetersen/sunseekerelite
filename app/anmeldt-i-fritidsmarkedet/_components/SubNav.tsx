@@ -1,24 +1,28 @@
 import Link from "next/link";
 import CtaButton from "./CtaButton";
+import SunseekerLogo from "./SunseekerLogo";
 
 export default function SubNav() {
   return (
-    <div className="w-full border-t border-white/10 bg-black text-white">
-      <div className="mx-auto flex max-w-content flex-col items-start justify-between gap-3 px-4 py-3 sm:flex-row sm:items-center lg:px-8">
-        <div className="text-sm font-medium text-white/90">
-          sunseeker Elite X Gen 2 Series
+    <div className="w-full bg-[#0a0a0a] text-white">
+      <div className="mx-auto flex h-[52px] max-w-content items-center justify-between gap-4 px-4 lg:px-8">
+        <div className="flex items-center gap-3">
+          <SunseekerLogo height={22} />
+          <span className="hidden text-[13px] font-medium text-white/60 sm:inline">
+            Elite X Gen 2 Series
+          </span>
         </div>
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-5">
           <Link
             href="https://sunseekerelite.com/dk/x-gen-2-series"
-            className="text-sm font-medium text-white/90 transition hover:text-white"
+            className="border-b-2 border-[#ff5016] pb-[6px] text-[13px] font-medium text-white"
           >
             Oversigt
           </Link>
           <Link
             href="https://sunseekerelite.com/dk/x-gen-2-series#specs"
-            className="text-sm font-medium text-white/90 transition hover:text-white"
+            className="hidden text-[13px] font-medium text-white/85 transition hover:text-white sm:inline"
           >
             Specifikationer
           </Link>

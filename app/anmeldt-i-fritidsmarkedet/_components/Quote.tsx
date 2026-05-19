@@ -1,23 +1,27 @@
 interface QuoteProps {
+  eyebrow?: string;
   quote: string;
   attribution: string;
-  label?: string;
 }
 
-export default function Quote({ quote, attribution, label }: QuoteProps) {
+export default function Quote({
+  eyebrow = "FRA ANMELDELSEN",
+  quote,
+  attribution,
+}: QuoteProps) {
   return (
     <section className="bg-white px-4 lg:px-8">
-      <div className="mx-auto max-w-prose">
-        <figure className="rounded-xl border-l-4 border-[--brand-orange-dark] bg-[#FFF4E6] p-6 sm:p-7">
-          {label ? (
-            <figcaption className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-[--text-primary]">
-              {label}
-            </figcaption>
-          ) : null}
-          <blockquote className="text-lg italic leading-relaxed text-[--text-primary] sm:text-xl">
-            “{quote}”
+      <div className="mx-auto max-w-[680px]">
+        <figure
+          className="rounded-xl border-l-[3px] border-brand-orange-dark bg-bg-cream px-8 py-7"
+        >
+          <figcaption className="text-[12px] font-semibold uppercase tracking-[0.12em] text-brand-orange-dark">
+            {eyebrow}
+          </figcaption>
+          <blockquote className="mt-3 text-[18px] italic leading-[1.5] text-ink-primary">
+            „{quote}”
           </blockquote>
-          <figcaption className="mt-4 text-sm italic text-[--text-secondary]">
+          <figcaption className="mt-4 text-[14px] text-ink-secondary">
             — {attribution}
           </figcaption>
         </figure>
