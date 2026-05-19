@@ -28,7 +28,7 @@ export default function FinalCta() {
             variant="secondary"
             size="lg"
           >
-            Læs hele anmeldelsen
+            Læs anmeldelsen i Fritidsmarkedet
           </CtaButton>
         </div>
       </div>

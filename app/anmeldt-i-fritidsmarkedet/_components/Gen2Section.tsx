@@ -1,6 +1,6 @@
 const upgrades: { title: string; body: string }[] = [
   {
-    title: "AONavi™ 2.0",
+    title: "AONavi 2.0",
     body: "Network RTK + VSLAM 2.0 med 4G-GPS.",
   },
   {
@@ -9,15 +9,11 @@ const upgrades: { title: string; body: string }[] = [
   },
   {
     title: "10 TOPS AI-chip",
-    body: "dobbelt så hurtig behandling som Gen 1.",
+    body: "dobbelt så hurtig som Gen 1.",
   },
   {
     title: "Op til 6000 m²",
     body: "kortlægning uden afgrænsningskabler.",
-  },
-  {
-    title: "Tre modeller",
-    body: "X3, X5 og X7 / X7 Plus.",
   },
 ];
 
@@ -26,12 +22,12 @@ export default function Gen2Section() {
     <section className="bg-white px-4 py-20 lg:px-8">
       <div className="mx-auto max-w-[680px]">
         <h3 className="h3-display text-ink-primary">
-          En ny generation: Sunseeker Elite X Gen 2
+          Den anmeldte X5 er Gen 1. X Gen 2-serien er nu ude.
         </h3>
         <p className="mt-6 text-[17px] leading-relaxed text-ink-primary">
-          Den anmeldte X5 er første generation. I 2026 lancerede Sunseeker
-          Elite næste generation af serien — X Gen 2 — der bygger videre på
-          det samme grundsystem og tilføjer:
+          Anmeldelsen dækker første generation. I 2026 lancerede Sunseeker
+          Elite næste generation af serien — X Gen 2 — bygget på samme
+          grundsystem med opdateringer på fire områder:
         </p>
 
         <ul className="mt-6 space-y-4">
@@ -44,8 +40,7 @@ export default function Gen2Section() {
         </ul>
 
         <p className="mt-6 text-[17px] leading-relaxed text-ink-primary">
-          Anmeldelsen i Fritidsmarkedet dækker Gen 1. X Gen 2 er den nye
-          serie i samme produktfamilie.
+          Tre modeller i serien: X3, X5 og X7 / X7 Plus.
         </p>
       </div>
     </section>
