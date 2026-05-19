@@ -5,8 +5,8 @@ interface SunseekerLogoProps {
   className?: string;
 }
 
-const SRC_W = 369;
-const SRC_H = 151;
+const SRC_W = 1000;
+const SRC_H = 300;
 
 export default function SunseekerLogo({
   height = 28,
