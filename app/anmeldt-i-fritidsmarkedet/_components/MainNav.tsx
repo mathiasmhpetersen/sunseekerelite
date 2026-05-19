@@ -14,10 +14,16 @@ const items: { label: string; href: string }[] = [
 export default function MainNav() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-white/[0.06] bg-[#0a0a0a]/95 text-white backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-content items-center justify-between px-4 lg:px-8">
-        <Link href="https://sunseekerelite.com/dk" aria-label="Sunseeker Elite" className="flex items-center">
-          <SunseekerLogo height={28} />
-        </Link>
+      <div className="mx-auto flex h-16 max-w-content items-center px-4 lg:px-8">
+        <div className="flex flex-1 items-center">
+          <Link
+            href="https://sunseekerelite.com/dk"
+            aria-label="Sunseeker Elite"
+            className="flex items-center"
+          >
+            <SunseekerLogo height={28} />
+          </Link>
+        </div>
 
         <nav className="hidden items-center gap-6 lg:flex">
           {items.map((item) => (
@@ -31,6 +37,7 @@ export default function MainNav() {
           ))}
         </nav>
 
+        <div className="hidden flex-1 lg:block" aria-hidden />
       </div>
     </header>
   );
