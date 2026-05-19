@@ -1,19 +1,19 @@
 const points: { title: string; body: string }[] = [
   {
-    title: "Kabelfri opsætning under én time",
-    body: "Fritidsmarkedet beskriver, hvordan AONavi-systemet kombinerer RTK-GNSS og VSLAM, så plænen kortlægges via app uden afgrænsningskabler. Opsætningen kræver ifølge anmeldelsen ingen teknisk ekspertise.",
+    title: "Kabelfri opsætning under én time.",
+    body: "AONavi-systemet kombinerer RTK-GNSS og VSLAM, så plænen kortlægges via app uden afgrænsningskabler.",
   },
   {
-    title: "Vision AI registrerer over 200 objekttyper",
-    body: "I testen identificerede plæneklipperen blandt andet et tyggelegetøj efterladt i haven. Systemet bruger et 3D-kikkertkamera og en 5TOPS AI-chip til at navigere uden om forhindringer.",
+    title: "Vision AI registrerer over 200 objekttyper.",
+    body: "I testen identificerede plæneklipperen blandt andet et tyggelegetøj efterladt på plænen.",
   },
   {
-    title: "Ride-on-Edge kantklipning",
-    body: "Anmeldelsen fremhæver, at X5 trimmer helt op til kanter og hegn, så der ikke står uklippede strimler tilbage.",
+    title: "Ride-on-Edge kantklipning.",
+    body: "X5 trimmer helt op til kanter og hegn, så der ikke står uklippede strimler tilbage.",
   },
   {
-    title: "Floating Cut System",
-    body: "Klippehøjden justeres midt på ruten, hvilket ifølge Fritidsmarkedet minimerer skalpering på ujævne overflader.",
+    title: "Floating Cut System.",
+    body: "Klippehøjden justeres midt på ruten, hvilket minimerer skalpering på ujævne overflader.",
   },
 ];
 
@@ -33,14 +33,12 @@ export default function ReviewSummary() {
     <section className="bg-white px-4 pt-24 lg:px-8">
       <div className="mx-auto max-w-[680px]">
         <h2 className="h2-display text-ink-primary">
-          Derfor giver Fritidsmarkedet Sunseeker Elite X5 topkarakter
+          Derfor fremhæver Fritidsmarkedet X5
         </h2>
         <p className="mt-6 text-[17px] leading-relaxed text-ink-primary">
-          I anmeldelsen tester Fritidsmarkedet X5 på en 1.700 m² plæne med
-          skråninger, skyggefulde områder og forhindringer som bålplads og
-          grøntsagsbed. Konklusionen er klar: robotplæneklipperen håndterer
-          kompleksiteten uden manuel indgriben. Fire elementer fremhæves
-          særligt:
+          I testen blev X5 sat op på en almindelig dansk plæne på 1.700 m²
+          med skråninger, skyggefulde områder og forhindringer som
+          bålplads og grøntsagsbed. Anmeldelsen peger på fire elementer:
         </p>
 
         <ul className="mt-8 space-y-6">
@@ -49,7 +47,7 @@ export default function ReviewSummary() {
               <Check />
               <p className="text-[17px] leading-relaxed text-ink-primary">
                 <span className="font-bold">{p.title}</span>
-                <span className="text-ink-secondary"> — {p.body}</span>
+                <span className="text-ink-secondary"> {p.body}</span>
               </p>
             </li>
           ))}
