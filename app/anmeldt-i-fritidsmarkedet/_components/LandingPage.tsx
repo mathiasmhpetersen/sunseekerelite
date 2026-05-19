@@ -1,6 +1,5 @@
 import TopBanner from "./TopBanner";
 import MainNav from "./MainNav";
-import SubNav from "./SubNav";
 import ArticleHero from "./ArticleHero";
 import HeroImage from "./HeroImage";
 import ReviewSummary from "./ReviewSummary";
@@ -17,7 +16,6 @@ export default function LandingPage() {
     <main>
       <TopBanner />
       <MainNav />
-      <SubNav />
 
       <ArticleHero />
       <HeroImage />
