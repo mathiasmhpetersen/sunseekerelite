@@ -5,8 +5,8 @@ interface SunseekerLogoProps {
   className?: string;
 }
 
-const SRC_W = 950;
-const SRC_H = 320;
+const SRC_W = 369;
+const SRC_H = 151;
 
 export default function SunseekerLogo({
   height = 28,
@@ -21,7 +21,7 @@ export default function SunseekerLogo({
       height={height}
       priority
       className={className}
-      style={{ height, width: "auto", mixBlendMode: "screen" }}
+      style={{ height, width: "auto" }}
     />
   );
 }
