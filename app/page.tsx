@@ -31,6 +31,15 @@ const landingpages: Landingpage[] = [
       "Advertorial bygget op om Fritidsmarkedets test af Elite X5 på en 1.700 m² plæne. 9,5/10. Fokus på kabelfri opsætning, Vision AI og kantklipning. Leder mod Elite X Gen 2 som det aktuelle køb.",
     hook: "“En pålidelig robotplæneklipper til rigtige græsplæner.”",
   },
+  {
+    title: "Gen2",
+    slug: "gen2",
+    url: "lp.sunseekerelite.dk/gen2",
+    status: "draft",
+    description:
+      "Duplikat af Fritidsmarkedet-advertorial som arbejdsudgave til Elite X Gen 2-vinkel. Klar til at blive tilpasset med ny copy, billeder og CTA-tracking.",
+    hook: "“En pålidelig robotplæneklipper til rigtige græsplæner.”",
+  },
 ];
 
 const statusLabel: Record<Status, string> = {
