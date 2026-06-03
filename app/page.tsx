@@ -18,14 +18,14 @@ type Landingpage = {
   hook: string;
 };
 
-const SUBDOMAIN = "lp.sunseekerelite.dk";
+const SUBDOMAIN = "www.sunseekerelite-anmeldelse.dk";
 const MAIN_DOMAIN = "sunseekerelite.com";
 
 const landingpages: Landingpage[] = [
   {
     title: "Anmeldt i Fritidsmarkedet",
-    slug: "anmeldt-i-fritidsmarkedet",
-    url: "sunseekerelite-anmeldelse.dk",
+    slug: "1",
+    url: "www.sunseekerelite-anmeldelse.dk/1",
     status: "live",
     description:
       "Advertorial bygget op om Fritidsmarkedets test af Elite X5 på en 1.700 m² plæne. 9,5/10. Fokus på kabelfri opsætning, Vision AI og kantklipning. Leder mod Elite X Gen 2 som det aktuelle køb.",
@@ -33,8 +33,8 @@ const landingpages: Landingpage[] = [
   },
   {
     title: "Gen2",
-    slug: "gen2",
-    url: "lp.sunseekerelite.dk/gen2",
+    slug: "2",
+    url: "www.sunseekerelite-anmeldelse.dk/2",
     status: "draft",
     description:
       "Duplikat af Fritidsmarkedet-advertorial som arbejdsudgave til Elite X Gen 2-vinkel. Klar til at blive tilpasset med ny copy, billeder og CTA-tracking.",
