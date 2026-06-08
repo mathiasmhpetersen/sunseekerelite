@@ -6,9 +6,11 @@ export type Model = {
   slug: string;
   area: string;
   priceDkk: string;
+  useCase: string;
   highlights: string[];
   image: string;
   imageTodo?: string;
+  featured?: boolean;
 };
 
 export const models: Model[] = [
@@ -18,6 +20,7 @@ export const models: Model[] = [
     slug: "x3-gen-2",
     area: "op til 800 m²",
     priceDkk: "7.999 kr.",
+    useCase: "Til mindre byhaver og rækkehuse",
     highlights: [
       "Forhjulstræk",
       "20 cm klippebredde",
@@ -32,6 +35,7 @@ export const models: Model[] = [
     slug: "x5-gen-2",
     area: "op til 2.000 m²",
     priceDkk: "15.999 kr.",
+    useCase: "Til typiske danske parcelhushaver",
     highlights: [
       "AWD",
       "60% hældning",
@@ -40,6 +44,7 @@ export const models: Model[] = [
     ],
     image: "/X3_Gen_23s.png",
     imageTodo: "replace with X5 Gen 2 render",
+    featured: true,
   },
   {
     id: "x7",
@@ -47,6 +52,7 @@ export const models: Model[] = [
     slug: "x7-gen-2",
     area: "op til 3.000 m²",
     priceDkk: "23.999 kr.",
+    useCase: "Til store grunde og komplekse haver",
     highlights: [
       "AWD",
       "70% hældning",
@@ -62,6 +68,7 @@ export const models: Model[] = [
     slug: "x7-plus-gen-2",
     area: "op til 6.000 m²",
     priceDkk: "27.999 kr.",
+    useCase: "Til meget store grunde og landejendomme",
     highlights: [
       "AWD",
       "70% hældning",
