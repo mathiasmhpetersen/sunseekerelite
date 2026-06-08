@@ -9,7 +9,6 @@ export type Model = {
   useCase: string;
   highlights: string[];
   image: string;
-  imageTodo?: string;
   featured?: boolean;
 };
 
@@ -27,7 +26,7 @@ export const models: Model[] = [
       "Vision AI dagsyn",
       "ideel til mindre haver",
     ],
-    image: "/X3_Gen_21s.png",
+    image: "/x3_gen_2-id.png",
   },
   {
     id: "x5",
@@ -42,8 +41,7 @@ export const models: Model[] = [
       "Vision AI 2.0 dag+nat",
       "LED-frontlys",
     ],
-    image: "/X3_Gen_23s.png",
-    imageTodo: "replace with X5 Gen 2 render",
+    image: "/x5_gen_2-id.png",
     featured: true,
   },
   {
@@ -59,8 +57,7 @@ export const models: Model[] = [
       "35 cm dobbeltskive",
       "elektronisk højdejustering",
     ],
-    image: "/X3_Gen_25s.png",
-    imageTodo: "replace with X7 Gen 2 render",
+    image: "/x7_gen_2-id.png",
   },
   {
     id: "x7plus",
@@ -75,15 +72,64 @@ export const models: Model[] = [
       "35 cm dobbeltskive",
       "5 års gratis nRTK + tyverisikring",
     ],
-    image: "/X3_Gen_27s.png",
-    imageTodo: "replace with X7 Plus Gen 2 render",
+    image: "/x7_plus_gen_2-id.png",
   },
 ];
 
 export type SpecRow = {
   label: string;
   values: Record<ModelId, string>;
+  /** Optional fine-print line under the values (e.g. renewal pricing) */
+  subline?: string;
 };
+
+export type SpecGroup = {
+  title: string;
+  rowLabels: string[];
+};
+
+export const specGroups: SpecGroup[] = [
+  { title: "Kapacitet", rowLabels: ["Anbefalet areal"] },
+  {
+    title: "Navigation & syn",
+    rowLabels: [
+      "Navigation",
+      "Vision AI",
+      "Kamera",
+      "Natfunktion",
+      "LED-frontlys",
+    ],
+  },
+  {
+    title: "Klipning",
+    rowLabels: [
+      "Klippebredde",
+      "Klippehøjde",
+      "Højdejustering",
+      "Knive",
+      "Knivhastighed",
+      "Klippehastighed",
+      "Multizoner",
+    ],
+  },
+  {
+    title: "Drev & terræn",
+    rowLabels: ["Drev", "Maks. hældning", "Affjedring"],
+  },
+  { title: "Strøm", rowLabels: ["Batteri", "Oplader"] },
+  {
+    title: "Tjenester & forbindelse",
+    rowLabels: [
+      "nRTK + tyverisikring",
+      "S Connect Module",
+      "Konnektivitet",
+      "Støjniveau",
+      "Display",
+    ],
+  },
+  { title: "Mål & vægt", rowLabels: ["Mål (L×B×H)", "Vægt"] },
+  { title: "Pris", rowLabels: ["Pris (inkl. moms)"] },
+];
 
 export const specRows: SpecRow[] = [
   {
@@ -129,6 +175,18 @@ export const specRows: SpecRow[] = [
       x5: "2 år gratis",
       x7: "2 år gratis",
       x7plus: "5 år gratis",
+    },
+    // VERIFY before go-live: official EU page shows €49/år for nRTK renewal.
+    // 365 kr./år is a working DKK estimate — confirm with Sunseeker DK / dealer.
+    subline: "Fornyelsespris efter gratisperiode: 365 kr./år*",
+  },
+  {
+    label: "S Connect Module",
+    values: {
+      x3: "Standard",
+      x5: "Standard",
+      x7: "Standard",
+      x7plus: "Standard",
     },
   },
   {
