@@ -23,7 +23,7 @@ export default function ModelSelector() {
           </p>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch">
+        <div className="mt-12 grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {models.map((m) => (
             <ModelCard key={m.id} model={m} />
           ))}

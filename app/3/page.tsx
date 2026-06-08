@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import MainNav from "./_components/MainNav";
 import StickyBuyBar from "./_components/StickyBuyBar";
-import SiteFooter from "./_components/SiteFooter";
 import Hero from "./_components/Hero";
 import TrustStrip from "./_components/TrustStrip";
 import ModelSelector from "./_components/ModelSelector";
@@ -11,7 +10,6 @@ import BrugervenligCarousel from "./_components/BrugervenligCarousel";
 import SpecTable from "./_components/SpecTable";
 import Faq from "./_components/Faq";
 import FinalCta from "./_components/FinalCta";
-import Disclaimer from "./_components/Disclaimer";
 
 export const metadata: Metadata = {
   title:
@@ -134,9 +132,7 @@ export default function Page() {
         <SpecTable />
         <Faq />
         <FinalCta />
-        <Disclaimer />
       </main>
-      <SiteFooter />
     </div>
   );
 }
