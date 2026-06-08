@@ -40,6 +40,15 @@ const landingpages: Landingpage[] = [
       "Duplikat af Fritidsmarkedet-advertorial som arbejdsudgave til Elite X Gen 2-vinkel. Klar til at blive tilpasset med ny copy, billeder og CTA-tracking.",
     hook: "“En pålidelig robotplæneklipper til rigtige græsplæner.”",
   },
+  {
+    title: "X Gen 2-serien",
+    slug: "3",
+    url: "www.sunseekerelite-anmeldelse.dk/3",
+    status: "draft",
+    description:
+      "Klassisk produktside for hele X Gen 2-serien (X3 / X5 / X7 / X7 Plus). Modelvælger med danske priser, AONavi 2.0, Vision AI 2.0, AWD-skråninger, fuld specifikationstabel og forhandler-CTA.",
+    hook: "“Ledningsfri. Antennefri. Bygget til hele haven.”",
+  },
 ];
 
 const statusLabel: Record<Status, string> = {
