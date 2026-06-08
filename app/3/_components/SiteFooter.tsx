@@ -1,5 +1,3 @@
-"use client";
-
 import SunseekerLogo from "./SunseekerLogo";
 
 const COLUMNS: { title: string; items: { label: string; href: string }[] }[] = [
@@ -110,41 +108,7 @@ export default function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-8 border-t border-white/10 pt-10 md:grid-cols-2 md:items-center">
-          <div>
-            <h3 className="text-[15px] font-semibold text-white">
-              Tilmeld dig vores nyhedsbrev
-            </h3>
-            <p className="mt-1.5 text-[13.5px] text-white/65">
-              Få nyt om produkter, opdateringer og kampagner.
-            </p>
-          </div>
-          <form
-            className="flex w-full gap-2"
-            onSubmit={(e) => e.preventDefault()}
-            action="#"
-          >
-            <label htmlFor="newsletter-email" className="sr-only">
-              Email
-            </label>
-            <input
-              id="newsletter-email"
-              name="email"
-              type="email"
-              placeholder="din@email.dk"
-              autoComplete="email"
-              className="min-w-0 flex-1 rounded-full border border-white/15 bg-white/[0.04] px-4 py-2.5 text-[14px] text-white placeholder:text-white/40 focus:border-white/40 focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="rounded-full bg-brand-gradient px-5 py-2.5 text-[13.5px] font-semibold text-white shadow-sm transition hover:brightness-110"
-            >
-              Tilmeld
-            </button>
-          </form>
-        </div>
-
-        <div className="mt-12 flex flex-col-reverse items-start justify-between gap-6 border-t border-white/10 pt-8 md:flex-row md:items-center">
+        <div className="mt-14 flex flex-col-reverse items-start justify-between gap-6 border-t border-white/10 pt-10 md:flex-row md:items-center">
           <div className="flex items-center gap-5">
             <SunseekerLogo height={22} />
             <span className="text-[12.5px] text-white/55">
