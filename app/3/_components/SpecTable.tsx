@@ -1,8 +1,11 @@
-import { models, specRows } from "../_lib/models";
+import { models, specRows, DEALER_URL } from "../_lib/models";
 
 export default function SpecTable() {
   return (
-    <section className="bg-white text-ink-primary">
+    <section
+      id="specifikationer"
+      className="bg-white text-ink-primary scroll-mt-24"
+    >
       <div className="mx-auto max-w-content px-5 py-20 lg:px-8 lg:py-28">
         <div className="max-w-[680px]">
           <p className="text-[11.5px] font-semibold uppercase tracking-[0.16em] text-brand-orange-dark">
@@ -33,6 +36,11 @@ export default function SpecTable() {
                     className="px-5 py-4 text-[13px] font-semibold text-ink-primary"
                   >
                     {m.name}
+                    {m.featured && (
+                      <span className="ml-2 inline-block rounded-full bg-brand-gradient px-2 py-0.5 text-[9.5px] font-bold uppercase tracking-[0.08em] text-white">
+                        Populær
+                      </span>
+                    )}
                   </th>
                 ))}
               </tr>
@@ -52,16 +60,33 @@ export default function SpecTable() {
                     {row.label}
                   </th>
                   {models.map((m) => (
-                    <td
-                      key={m.id}
-                      className="px-5 py-3.5 text-ink-primary"
-                    >
+                    <td key={m.id} className="px-5 py-3.5 text-ink-primary">
                       {row.values[m.id]}
                     </td>
                   ))}
                 </tr>
               ))}
             </tbody>
+            <tfoot>
+              <tr className="border-t border-line-subtle bg-white">
+                <th
+                  scope="row"
+                  className="sticky left-0 z-10 bg-white px-5 py-5 text-[12px] font-semibold uppercase tracking-[0.08em] text-ink-tertiary"
+                >
+                  Køb
+                </th>
+                {models.map((m) => (
+                  <td key={m.id} className="px-5 py-5 align-top">
+                    <a
+                      href={DEALER_URL}
+                      className="inline-flex items-center justify-center rounded-full bg-brand-gradient px-3.5 py-2 text-[12.5px] font-semibold text-white transition hover:brightness-110"
+                    >
+                      Vælg {m.name}
+                    </a>
+                  </td>
+                ))}
+              </tr>
+            </tfoot>
           </table>
         </div>
       </div>

@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import MainNav from "./_components/MainNav";
+import StickyBuyBar from "./_components/StickyBuyBar";
 import SiteFooter from "./_components/SiteFooter";
 import Hero from "./_components/Hero";
+import TrustStrip from "./_components/TrustStrip";
 import ModelSelector from "./_components/ModelSelector";
 import FeatureSection from "./_components/FeatureSection";
 import StatRow from "./_components/StatRow";
+import BrugervenligCarousel from "./_components/BrugervenligCarousel";
 import SpecTable from "./_components/SpecTable";
 import Faq from "./_components/Faq";
 import FinalCta from "./_components/FinalCta";
@@ -31,8 +34,10 @@ export default function Page() {
   return (
     <div className="bg-white">
       <MainNav />
+      <StickyBuyBar />
       <main>
         <Hero />
+        <TrustStrip />
         <ModelSelector />
 
         <FeatureSection
@@ -47,8 +52,11 @@ export default function Page() {
             "Ubegrænsede multizoner",
           ]}
           image={{
+            // TODO: replace with aonavi-stripe.jpg (orange virtual-boundary light stripe)
             src: "/X3_Gen_28s.png",
-            alt: "X Gen 2 navigation",
+            alt: "AONavi 2.0 virtuel afgrænsning",
+            overlayLabel: "AONavi 2.0",
+            overlayValue: "0 kabler",
           }}
         />
 
@@ -57,10 +65,13 @@ export default function Page() {
           label="Vision AI"
           title="Ser forhindringer — dag og nat"
           body="Vision AI 2.0 bruger et binokulært kamera til genkendelse om dagen og et iToF-kamera om natten, så robotten registrerer og kører uden om forhindringer 24/7. Den genkender over 200 objekttyper — fra havemøbler og legetøj til træer og bede."
-          note="X3 Gen 2 har dagsyn med binokulært kamera. Vision AI 2.0 med iToF nattedrift gælder X5, X7 og X7 Plus."
+          note="* X3 Gen 2 har binokulært kamera (dagsyn). Vision AI 2.0 med iToF nattedrift gælder X5, X7 og X7 Plus."
           image={{
+            // TODO: replace with visionai-camera.jpg (iToF + Binocular lens explosion)
             src: "/X3_Gen_24s.png",
-            alt: "X Gen 2 Vision AI",
+            alt: "Vision AI 2.0 binokulært + iToF kamera",
+            overlayLabel: "Objekttyper",
+            overlayValue: "200+",
           }}
           reverse
         />
@@ -71,11 +82,13 @@ export default function Page() {
           title="Bygget til rigtige haver"
           body="Med all-wheel drive og drejbart baghjul håndterer X5, X7 og X7 Plus skråninger op til 70% (35°), våd græs, rødder og ujævn jord. Forhjulsaffjedring holder klippeskjoldet plant, så klippehøjden forbliver ensartet — uden skalpering på toppe og kanter."
           image={{
+            // TODO: replace with terrain-awd.jpg (glowing-wheel AWD render)
             src: "/X3_Gen_26s.png",
-            alt: "X Gen 2 på skråning",
+            alt: "AWD og drejbart baghjul på skråning",
+            overlayLabel: "Maks. hældning",
+            overlayValue: "70% / 35°",
           }}
-        >
-        </FeatureSection>
+        />
 
         <section className="bg-[#0a0a0a]">
           <div className="mx-auto -mt-12 max-w-content px-5 pb-20 lg:px-8 lg:pb-28">
@@ -94,9 +107,11 @@ export default function Page() {
           label="Klippekvalitet"
           title="Rene baner helt ud til kanten"
           body="Floating Cut System justerer klippehøjden midt på ruten og minimerer skalpering på ujævne overflader. Ride-on Edge trimmer helt op til kanter og hegn, så der ikke står uklippede strimler tilbage. X7 og X7 Plus klipper 35 cm bredt med dobbeltskive for hurtigere dækning på store plæner."
+          note="* Kant-skæreskive og Floating Cut varierer pr. model."
           image={{
+            // TODO: replace with rideon-edge.jpg (mower trimming along paved edge)
             src: "/X3_Gen_2_Extra_Precise_Edge_Cutting_Disc_2.png",
-            alt: "Ride-on Edge klippeskive",
+            alt: "Ride-on Edge klippeskive langs kant",
           }}
           reverse
         />
@@ -107,11 +122,15 @@ export default function Page() {
           title="Klar på under én time"
           body="Kabelfri opsætning via app. Kør robotten rundt om plænens kant én gang for at definere virtuelle grænser, opret zoner for for-, side- og bagplæne, og tilføj udelukkelseszoner omkring bede og bålpladser. Ingen gravearbejde, ingen kabler."
           image={{
+            // TODO: replace with app-screens.jpg (phone mockups: mapping, zones, maintenance)
             src: "/X3_Gen_27s.png",
-            alt: "Opsætning via app",
+            alt: "Opsætning via Sunseeker-appen",
+            overlayLabel: "Opsætningstid",
+            overlayValue: "< 1 time",
           }}
         />
 
+        <BrugervenligCarousel />
         <SpecTable />
         <Faq />
         <FinalCta />
