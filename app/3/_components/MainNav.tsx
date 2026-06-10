@@ -20,30 +20,23 @@ const NAV: NavItem[] = [
   { label: "Support", href: "https://sunseekerelite.com/dk/support" },
 ];
 
-const SERIES = [
-  { label: "X Gen 2 Series", active: true },
-  { label: "X4", active: false },
-  { label: "X Series", active: false },
-];
+const SERIES = [{ label: "X Gen 2 Series", active: true }];
 
 const PRODUCTS = [
   {
-    name: "X7 / X7 Plus Gen 2",
-    image: "/nav-x7-gen-2.jpg",
-    href: "https://sunseekerelite.com/dk/x7-gen-2",
-    span: "lg:col-span-2",
+    name: "X3 Gen 2",
+    image: "/nav-x3-gen-2.jpg",
+    href: "https://sunseekerelite.com/dk/x3-gen-2",
   },
   {
     name: "X5 Gen 2",
     image: "/nav-x5-gen-2.jpg",
     href: "https://sunseekerelite.com/dk/x5-gen-2",
-    span: "",
   },
   {
-    name: "X3 Gen 2",
-    image: "/nav-x3-gen-2.jpg",
-    href: "https://sunseekerelite.com/dk/x3-gen-2",
-    span: "",
+    name: "X7 / X7 Plus Gen 2",
+    image: "/nav-x7-gen-2.jpg",
+    href: "https://sunseekerelite.com/dk/x7-gen-2",
   },
 ];
 
@@ -174,27 +167,27 @@ export default function MainNav() {
             </ul>
           </aside>
 
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {PRODUCTS.map((p) => (
               <a
                 key={p.name}
                 href={p.href}
-                className={`group relative block overflow-hidden rounded-2xl bg-[#e6e6e6] ${p.span}`}
+                className="group relative block overflow-hidden rounded-2xl bg-[#e6e6e6]"
                 onClick={() => setProductsOpen(false)}
               >
-                <div className="relative aspect-[16/10] w-full">
+                <div className="relative aspect-[4/3] w-full">
                   <Image
                     src={p.image}
                     alt={p.name}
                     fill
-                    sizes="(max-width: 1024px) 50vw, 380px"
+                    sizes="(max-width: 1024px) 50vw, 260px"
                     className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                   />
                   <div
                     aria-hidden="true"
                     className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/55 via-black/0 to-transparent"
                   />
-                  <h3 className="absolute inset-x-5 bottom-4 text-[20px] font-bold leading-tight tracking-[-0.01em] text-white drop-shadow">
+                  <h3 className="absolute inset-x-4 bottom-3 text-[16px] font-bold leading-tight tracking-[-0.01em] text-white drop-shadow">
                     {p.name}
                   </h3>
                 </div>
