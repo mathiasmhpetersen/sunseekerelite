@@ -5,6 +5,7 @@ import Hero from "./_components/Hero";
 import TrustStrip from "./_components/TrustStrip";
 import ModelSelector from "./_components/ModelSelector";
 import FeatureSection from "./_components/FeatureSection";
+import FloatingDiscSection from "./_components/FloatingDiscSection";
 import StatRow from "./_components/StatRow";
 import BrugervenligCarousel from "./_components/BrugervenligCarousel";
 import SpecTable from "./_components/SpecTable";
@@ -110,6 +111,8 @@ export default function Page() {
           }}
           reverse
         />
+
+        <FloatingDiscSection />
 
         <FeatureSection
           variant="dark"
