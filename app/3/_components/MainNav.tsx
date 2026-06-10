@@ -13,9 +13,9 @@ type NavItem = {
 const NAV: NavItem[] = [
   { label: "Produkter", href: "https://sunseekerelite.com/dk/products", dropdown: true },
   { label: "Tilbehør", href: "https://sunseekerelite.com/dk/accessories" },
-  { label: "Udforsk", href: "https://sunseekerelite.com/dk/explore" },
-  { label: "Om Os", href: "https://sunseekerelite.com/dk/about" },
-  { label: "Bliv Forhandler", href: "https://sunseekerelite.com/dk/become-dealer" },
+  { label: "Udforsk", href: "https://sunseekerelite.com/dk/news" },
+  { label: "Om Os", href: "https://sunseekerelite.com/dk/about-us" },
+  { label: "Bliv Forhandler", href: "https://sunseekerelite.com/dk/become-a-dealer" },
   { label: "Hvor den kan købes", href: "https://sunseekerelite.com/dk/where-to-buy" },
   { label: "Support", href: "https://sunseekerelite.com/dk/support" },
 ];
