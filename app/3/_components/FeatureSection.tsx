@@ -17,6 +17,12 @@ interface FeatureSectionProps {
     overlayValue?: string;
     todo?: string;
   };
+  video?: {
+    src: string;
+    poster?: string;
+    overlayLabel?: string;
+    overlayValue?: string;
+  };
   reverse?: boolean;
 }
 
@@ -28,6 +34,7 @@ export default function FeatureSection({
   bullets,
   note,
   image,
+  video,
   reverse = false,
 }: FeatureSectionProps) {
   const isDark = variant === "dark";
@@ -81,7 +88,40 @@ export default function FeatureSection({
             )}
           </div>
 
-          {image && (
+          {video ? (
+            <div>
+              <div className="relative aspect-[5/4] w-full overflow-hidden rounded-3xl bg-black">
+                <video
+                  src={video.src}
+                  poster={video.poster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/55 via-black/10 to-transparent"
+                />
+                {(video.overlayLabel || video.overlayValue) && (
+                  <div className="absolute left-5 top-5 text-white md:left-7 md:top-7">
+                    {video.overlayLabel && (
+                      <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-white/75">
+                        {video.overlayLabel}
+                      </p>
+                    )}
+                    {video.overlayValue && (
+                      <p className="mt-1 text-[32px] font-bold leading-none tracking-[-0.02em] text-white md:text-[40px]">
+                        {video.overlayValue}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          ) : image ? (
             <div>
               <div className="relative aspect-[5/4] w-full overflow-hidden rounded-3xl bg-black">
                 <Image
@@ -111,7 +151,7 @@ export default function FeatureSection({
                 )}
               </div>
             </div>
-          )}
+          ) : null}
         </div>
       </div>
     </section>
