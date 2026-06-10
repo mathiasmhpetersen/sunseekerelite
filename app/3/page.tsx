@@ -8,6 +8,7 @@ import FeatureSection from "./_components/FeatureSection";
 import FloatingDiscSection from "./_components/FloatingDiscSection";
 import StatRow from "./_components/StatRow";
 import BrugervenligCarousel from "./_components/BrugervenligCarousel";
+import BoxContentsSection from "./_components/BoxContentsSection";
 import SpecTable from "./_components/SpecTable";
 import Faq from "./_components/Faq";
 import FinalCta from "./_components/FinalCta";
@@ -129,6 +130,7 @@ export default function Page() {
 
         <BrugervenligCarousel />
         <SpecTable />
+        <BoxContentsSection />
         <Faq />
         <FinalCta />
       </main>
