@@ -80,9 +80,8 @@ export default function Page() {
           title="Bygget til rigtige haver"
           body="Med all-wheel drive og drejbart baghjul håndterer X5, X7 og X7 Plus skråninger op til 70% (35°), våd græs, rødder og ujævn jord. Forhjulsaffjedring holder klippeskjoldet plant, så klippehøjden forbliver ensartet — uden skalpering på toppe og kanter."
           image={{
-            // TODO: replace with terrain-awd.jpg (glowing-wheel AWD render)
-            src: "/X3_Gen_26s.png",
-            alt: "AWD og drejbart baghjul på skråning",
+            src: "/terrain-slope.jpg",
+            alt: "X Gen 2 klipper en skråning",
             overlayLabel: "Maks. hældning",
             overlayValue: "70% / 35°",
           }}
