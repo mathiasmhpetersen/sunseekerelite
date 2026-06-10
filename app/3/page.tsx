@@ -50,9 +50,8 @@ export default function Page() {
             "Ubegrænsede multizoner",
           ]}
           image={{
-            // TODO: replace with aonavi-stripe.jpg (orange virtual-boundary light stripe)
-            src: "/X3_Gen_28s.png",
-            alt: "AONavi 2.0 virtuel afgrænsning",
+            src: "/aonavi-stripe.png",
+            alt: "AONavi 2.0 virtuel afgrænsning omkring haven",
             overlayLabel: "AONavi 2.0",
             overlayValue: "0 kabler",
           }}
