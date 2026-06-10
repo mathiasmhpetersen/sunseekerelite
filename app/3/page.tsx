@@ -106,10 +106,8 @@ export default function Page() {
           title="Rene baner helt ud til kanten"
           body="Floating Cut System justerer klippehøjden midt på ruten og minimerer skalpering på ujævne overflader. Ride-on Edge trimmer helt op til kanter og hegn, så der ikke står uklippede strimler tilbage. X7 og X7 Plus klipper 35 cm bredt med dobbeltskive for hurtigere dækning på store plæner."
           note="* Kant-skæreskive og Floating Cut varierer pr. model."
-          image={{
-            // TODO: replace with rideon-edge.jpg (mower trimming along paved edge)
-            src: "/X3_Gen_2_Extra_Precise_Edge_Cutting_Disc_2.png",
-            alt: "Ride-on Edge klippeskive langs kant",
+          video={{
+            src: "/klippekvalitet.mp4",
           }}
           reverse
         />
