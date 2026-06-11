@@ -12,7 +12,7 @@ type Card = {
 const CARDS: Card[] = [
   {
     title: "Smart LCD-skærm",
-    image: "/X3_Gen_22s.png",
+    image: "/X3_Gen_28s.png",
     todo: "replace with uv-lcd.jpg",
   },
   {
@@ -113,18 +113,26 @@ export default function BrugervenligCarousel() {
           {CARDS.map((c) => (
             <article
               key={c.title}
-              className="relative aspect-[3/4] w-[260px] shrink-0 snap-start overflow-hidden rounded-3xl bg-black sm:w-[300px] lg:w-[320px]"
+              className="group relative aspect-[3/4] w-[260px] shrink-0 snap-start overflow-hidden rounded-3xl bg-black transition duration-200 ease-out hover:-translate-y-1 sm:w-[300px] lg:w-[320px]"
             >
+              <div
+                aria-hidden="true"
+                className="absolute inset-0"
+                style={{
+                  background:
+                    "radial-gradient(60% 55% at 50% 45%, #2a2018 0%, #110d0a 55%, #000000 100%)",
+                }}
+              />
               <Image
                 src={c.image}
                 alt={c.title}
                 fill
                 sizes="(max-width: 640px) 260px, 320px"
-                className="object-cover"
+                className="object-cover transition duration-200 ease-out group-hover:scale-[1.03]"
               />
               <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent"
+                className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent"
               />
               <h3 className="absolute inset-x-5 bottom-5 text-[18px] font-bold leading-tight text-white">
                 {c.title}
