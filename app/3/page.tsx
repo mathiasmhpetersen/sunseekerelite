@@ -69,9 +69,8 @@ export default function Page() {
           body="Vision AI 2.0 bruger et binokulært kamera til genkendelse om dagen og et iToF-kamera om natten, så robotten registrerer og kører uden om forhindringer 24/7. Den genkender over 200 objekttyper — fra havemøbler og legetøj til træer og bede."
           note="* X3 Gen 2 har binokulært kamera (dagsyn). Vision AI 2.0 med iToF nattedrift gælder X5, X7 og X7 Plus."
           image={{
-            // TODO: replace with visionai-camera.jpg (iToF + Binocular lens explosion)
-            src: "/X3_Gen_24s.png",
-            alt: "Vision AI 2.0 binokulært + iToF kamera",
+            src: "/vision-ai-obstacle.jpg",
+            alt: "X7 Gen 2 detekterer forhindringer med Vision AI 2.0",
             overlayLabel: "Objekttyper",
             overlayValue: "200+",
           }}
@@ -84,8 +83,8 @@ export default function Page() {
           title="Bygget til rigtige haver"
           body="Med all-wheel drive og drejbart baghjul håndterer X5, X7 og X7 Plus skråninger op til 70% (35°), våd græs, rødder og ujævn jord. Forhjulsaffjedring holder klippeskjoldet plant, så klippehøjden forbliver ensartet — uden skalpering på toppe og kanter."
           image={{
-            src: "/terrain-slope.jpg",
-            alt: "X Gen 2 klipper en skråning",
+            src: "/terrain-climbing.jpg",
+            alt: "X5 Gen 2 kører op ad en stejl skråning",
             overlayLabel: "Maks. hældning",
             overlayValue: "70% / 35°",
           }}
@@ -132,9 +131,9 @@ export default function Page() {
         />
 
         <BrugervenligCarousel />
+        <ReviewsCarousel />
         <SpecTable />
         <BoxContentsSection />
-        <ReviewsCarousel />
         <Faq />
         <FinalCta />
       </main>
