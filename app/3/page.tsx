@@ -8,7 +8,6 @@ import ModelSelector from "./_components/ModelSelector";
 import FeatureSection from "./_components/FeatureSection";
 import FloatingDiscSection from "./_components/FloatingDiscSection";
 import StatRow from "./_components/StatRow";
-import BrugervenligCarousel from "./_components/BrugervenligCarousel";
 import BoxContentsSection from "./_components/BoxContentsSection";
 import SpecTable from "./_components/SpecTable";
 import ReviewsCarousel from "./_components/ReviewsCarousel";
@@ -122,15 +121,13 @@ export default function Page() {
           title="Klar på under én time"
           body="Kabelfri opsætning via app. Kør robotten rundt om plænens kant én gang for at definere virtuelle grænser, opret zoner for for-, side- og bagplæne, og tilføj udelukkelseszoner omkring bede og bålpladser. Ingen gravearbejde, ingen kabler."
           image={{
-            // TODO: replace with app-screens.jpg (phone mockups: mapping, zones, maintenance)
-            src: "/X3_Gen_27s.png",
-            alt: "Opsætning via Sunseeker-appen",
+            src: "/setup-app-lifestyle.jpg",
+            alt: "Opsætning af Sunseeker X Gen 2 via app i haven",
             overlayLabel: "Opsætningstid",
             overlayValue: "< 1 time",
           }}
         />
 
-        <BrugervenligCarousel />
         <ReviewsCarousel />
         <SpecTable />
         <BoxContentsSection />

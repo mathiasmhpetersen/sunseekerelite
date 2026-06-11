@@ -17,14 +17,14 @@ export default function BoxContentsSection() {
           </p>
         </div>
 
-        <div className="mt-12 overflow-hidden rounded-3xl border border-line-subtle bg-[#f4efe6]">
+        <div className="mt-12 overflow-hidden rounded-3xl">
           <div className="relative aspect-[2/1] w-full">
             <Image
               src="/box-contents.jpg"
               alt="Kassens indhold — robotplæneklipper, ladestation, oplader, rengøringsbørste, ekstra knive og skruer, manualer"
               fill
               sizes="(max-width: 768px) 90vw, 1080px"
-              className="object-contain p-4 md:p-8"
+              className="object-contain"
             />
           </div>
         </div>
