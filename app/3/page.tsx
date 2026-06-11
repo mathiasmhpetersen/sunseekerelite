@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import MainNav from "./_components/MainNav";
+import MetaPixel from "./_components/MetaPixel";
 import StickyBuyBar from "./_components/StickyBuyBar";
 import Hero from "./_components/Hero";
 import TrustStrip from "./_components/TrustStrip";
@@ -33,6 +34,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className="bg-white">
+      <MetaPixel />
       <MainNav />
       <StickyBuyBar />
       <main>
