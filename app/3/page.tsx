@@ -11,6 +11,7 @@ import StatRow from "./_components/StatRow";
 import BrugervenligCarousel from "./_components/BrugervenligCarousel";
 import BoxContentsSection from "./_components/BoxContentsSection";
 import SpecTable from "./_components/SpecTable";
+import ReviewsCarousel from "./_components/ReviewsCarousel";
 import Faq from "./_components/Faq";
 import FinalCta from "./_components/FinalCta";
 
@@ -133,6 +134,7 @@ export default function Page() {
         <BrugervenligCarousel />
         <SpecTable />
         <BoxContentsSection />
+        <ReviewsCarousel />
         <Faq />
         <FinalCta />
       </main>

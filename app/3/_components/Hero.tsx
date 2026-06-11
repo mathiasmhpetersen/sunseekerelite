@@ -18,7 +18,11 @@ export default function Hero() {
           </p>
           <h1
             className="mt-5 text-balance font-sans font-bold leading-[1.05] tracking-[-0.02em] text-white"
-            style={{ fontSize: "clamp(2.25rem, 5vw, 4rem)" }}
+            style={{
+              fontSize: "clamp(2.25rem, 5vw, 4rem)",
+              textShadow:
+                "0 0 32px rgba(255, 138, 40, 0.22), 0 0 80px rgba(255, 80, 22, 0.12)",
+            }}
           >
             Ledningsfri. Antennefri. Bygget til hele haven.
           </h1>
@@ -48,6 +52,14 @@ export default function Hero() {
         <div className="relative md:order-2">
           <div className="relative mx-auto aspect-[5/4] w-full max-w-[600px]">
             {/* TODO: replace with hero-lineup.jpg (4 mowers in a row at dusk) */}
+            <div
+              aria-hidden="true"
+              className="absolute inset-0"
+              style={{
+                background:
+                  "radial-gradient(55% 50% at 50% 48%, rgba(255, 138, 40, 0.18) 0%, rgba(40, 28, 20, 0.55) 35%, rgba(0, 0, 0, 0) 75%)",
+              }}
+            />
             <div
               aria-hidden="true"
               className="absolute inset-x-[8%] bottom-[6%] h-[14%] rounded-[50%] blur-2xl"

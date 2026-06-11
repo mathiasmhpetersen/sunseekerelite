@@ -22,11 +22,11 @@ const ITEMS: Item[] = [
     ),
   },
   {
-    label: "TÜV Rheinland-certificeret datasikkerhed",
+    label: "3 års garanti",
     icon: (
       <>
-        <rect x="4" y="10" width="16" height="10" rx="2" />
-        <path d="M8 10V7a4 4 0 0 1 8 0v3" />
+        <path d="M12 2l2.5 3 3.8.4-2.8 2.7.8 3.9L12 10.2 7.7 12l.8-3.9-2.8-2.7L9.5 5z" />
+        <path d="M7.5 11.5L5 22l4.5-2.5L12 22l2.5-2.5L19 22l-2.5-10.5" />
       </>
     ),
   },

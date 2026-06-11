@@ -59,7 +59,17 @@ export default function FeatureSection({
             <p className="text-[11.5px] font-semibold uppercase tracking-[0.16em] text-brand-orange-dark">
               {label}
             </p>
-            <h2 className="mt-4 text-balance text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[40px]">
+            <h2
+              className="mt-4 text-balance text-[30px] font-bold leading-[1.12] tracking-[-0.02em] md:text-[40px]"
+              style={
+                isDark
+                  ? {
+                      textShadow:
+                        "0 0 28px rgba(255, 138, 40, 0.18), 0 0 70px rgba(255, 80, 22, 0.10)",
+                    }
+                  : undefined
+              }
+            >
               {title}
             </h2>
             <p className={`mt-5 text-[16.5px] leading-[1.6] ${bodyClass}`}>
@@ -124,6 +134,16 @@ export default function FeatureSection({
           ) : image ? (
             <div>
               <div className="relative aspect-[5/4] w-full overflow-hidden rounded-3xl bg-black">
+                {isDark && (
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0"
+                    style={{
+                      background:
+                        "radial-gradient(60% 55% at 50% 50%, #2a2018 0%, #110d0a 55%, #000000 100%)",
+                    }}
+                  />
+                )}
                 <Image
                   src={image.src}
                   alt={image.alt}
