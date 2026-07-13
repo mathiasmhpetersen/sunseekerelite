@@ -9,7 +9,7 @@ import {
 
 const rowsByLabel = new Map(specRows.map((r) => [r.label, r]));
 
-// Label column + 7 model columns (3 Gen 1 kampagne + 4 Gen 2, incl. X3 Gen 2).
+// Label column + 7 model columns (3 Gen 1 tilbud + 4 Gen 2, incl. X3 Gen 2).
 const GRID = "grid-cols-[168px_repeat(7,minmax(122px,1fr))]";
 
 export default function ComparisonTable() {
@@ -50,7 +50,7 @@ export default function ComparisonTable() {
                         : "bg-[#fff1ea] text-brand-orange-dark"
                     }`}
                   >
-                    {c.gen === 1 ? "Gen 1 · Kampagne" : "Gen 2"}
+                    {c.gen === 1 ? "Gen 1 · Tilbud" : "Gen 2"}
                   </span>
                   <div
                     className={`relative mt-2 aspect-square w-full max-w-[92px] overflow-hidden rounded-xl ${
@@ -201,7 +201,7 @@ export default function ComparisonTable() {
 
         <p className="mt-8 max-w-[820px] text-[12px] leading-[1.55] text-ink-tertiary">
           Priser er vejledende udsalgspriser inkl. moms og kan variere mellem
-          forhandlere. Kampagnepriser gælder Gen 1 (X5 / X7 / X7 Plus) frem til
+          forhandlere. Tilbudspriser gælder Gen 1 (X5 / X7 / X7 Plus) frem til
           31. august 2026, så længe lager haves. Gen 1 kører i dagtilstand;
           nat-syn, iToF og inkluderet tyverisikring er Gen 2 (X5 / X7 / X7 Plus).
           Entry-modellen X3 Gen 2 er dog dagdrift uden nat-syn/iToF. På X5 og X7

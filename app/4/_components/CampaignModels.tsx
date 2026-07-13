@@ -25,7 +25,7 @@ export default function CampaignModels() {
         </div>
 
         <p className="mt-10 max-w-[680px] text-[13px] leading-[1.55] text-ink-tertiary">
-          Kampagnepriser gælder Gen 1 (X5 / X7 / X7 Plus) frem til 31. august
+          Tilbudspriser gælder Gen 1 (X5 / X7 / X7 Plus) frem til 31. august
           2026 — så længe lager haves. Priser er inkl. moms.
         </p>
       </div>

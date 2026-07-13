@@ -9,7 +9,7 @@ const FAQS = [
   },
   {
     q: "Hvornår slutter tilbuddet?",
-    a: "31. august 2026, så længe lager haves. Kampagnen gælder Gen 1 (X5, X7 og X7 Plus).",
+    a: "31. august 2026, så længe lager haves. Tilbuddet gælder Gen 1 (X5, X7 og X7 Plus).",
   },
   {
     q: "Kører den om natten?",

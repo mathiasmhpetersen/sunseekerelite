@@ -9,7 +9,7 @@ type Profile = {
 const PROFILES: Profile[] = [
   {
     eyebrow: "Mere have for pengene",
-    title: "Vælg en større Gen 1 (kampagne)",
+    title: "Vælg en større Gen 1 (tilbud)",
     body: "Hvis din grund er stor, du vil have mest have for pengene, og dagdrift er nok.",
     example: "Fx X7 Plus op til 6.000 m² til 17.999 kr.",
     featured: true,

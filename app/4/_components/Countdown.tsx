@@ -67,7 +67,7 @@ export default function Countdown({
           isDark ? "text-white/85" : "text-ink-primary"
         }`}
       >
-        Kampagnen er slut — spørg din forhandler om aktuelle priser.
+        Tilbuddet er slut — spørg din forhandler om aktuelle priser.
       </p>
     );
   }

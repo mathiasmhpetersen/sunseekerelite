@@ -7,7 +7,7 @@ import { DEALER_URL } from "../_lib/campaign";
 type NavItem = { label: string; href: string };
 
 const NAV: NavItem[] = [
-  { label: "Kampagne", href: "#kampagne" },
+  { label: "Tilbud", href: "#kampagne" },
   { label: "Sammenlign", href: "#sammenlign" },
   { label: "Gen 1 vs Gen 2", href: "#generationer" },
   { label: "FAQ", href: "#faq" },
@@ -26,7 +26,7 @@ export default function MainNav() {
         >
           <SunseekerLogo height={24} />
           <span className="hidden text-[12px] font-medium text-white/60 sm:inline">
-            Elite X-serien — Sommerkampagne
+            Elite X-serien — Sommertilbud
           </span>
         </a>
 

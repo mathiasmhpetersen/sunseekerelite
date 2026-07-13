@@ -77,7 +77,7 @@ export default function Gen1Card({ model }: { model: Gen1Model }) {
             {model.nu}
           </p>
           <p className="mt-1 text-[11.5px] text-ink-tertiary">
-            inkl. moms · kampagnepris
+            inkl. moms · tilbudspris
           </p>
           <a
             href={DEALER_URL}
