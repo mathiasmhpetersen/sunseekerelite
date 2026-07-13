@@ -10,7 +10,7 @@ import {
   gen2Models,
 } from "../_lib/campaign";
 
-type SizeKey = "under1000" | "under2000" | "2000to3000" | "3000to6000";
+type SizeKey = "under800" | "under2000" | "2000to3000" | "3000to6000";
 
 type Option = {
   key: SizeKey;
@@ -23,13 +23,13 @@ type Option = {
 
 const OPTIONS: Option[] = [
   {
-    key: "under1000",
-    label: "Under 1.000 m²",
-    gen2Id: "x3g2", // entry Gen 2 — no Gen 1 campaign model this small
+    key: "under800",
+    label: "Under 800 m²",
+    gen2Id: "x3g2", // X3 Gen 2 is rated op til 800 m²; no Gen 1 campaign model this small
   },
   {
     key: "under2000",
-    label: "1.000–2.000 m²",
+    label: "800–2.000 m²",
     gen1Id: "x5",
     gen2Id: "x5g2",
   },
