@@ -10,7 +10,6 @@ import {
   gen1Models,
   gen2Models,
   gen2Upgrades,
-  gen1Keeps,
 } from "../_lib/campaign";
 
 const gen1ById: Record<string, Gen1Model> = Object.fromEntries(
@@ -111,7 +110,7 @@ export default function GenerationsSection() {
           <div className="flex flex-col rounded-3xl border border-white/12 bg-white/[0.04] p-6 lg:p-8">
             <div className="flex items-center justify-between gap-3">
               <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-white/55">
-                Gen 1 · Kampagne
+                Gen 1 · Tilbud
               </p>
               <span className="rounded-full bg-brand-gradient px-2.5 py-1 text-[10.5px] font-bold text-white">
                 SPAR {g1.spar}
@@ -200,14 +199,6 @@ export default function GenerationsSection() {
             </a>
           </div>
         </div>
-
-        {/* Honest counter-note */}
-        <p className="mt-6 flex items-start gap-2.5 text-[13.5px] italic leading-[1.5] text-white/60">
-          <span aria-hidden="true" className="mt-0.5 not-italic">
-            ↺
-          </span>
-          <span>Gen 1 beholder {gen1Keeps}.</span>
-        </p>
       </div>
     </section>
   );

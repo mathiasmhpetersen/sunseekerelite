@@ -19,7 +19,7 @@ export default function SiteFooter() {
 
         <p className="mt-8 max-w-[820px] text-[12px] leading-[1.6] text-white/45">
           Priser er vejledende udsalgspriser inkl. moms og kan variere mellem
-          forhandlere. Kampagne gælder Gen 1 (X5 / X7 / X7 Plus) frem til 31.
+          forhandlere. Tilbuddet gælder Gen 1 (X5 / X7 / X7 Plus) frem til 31.
           august 2026, så længe lager haves. Gen 1 kører i dagtilstand; nat-syn,
           iToF-kamera og inkluderet tyverisikring er Gen 2. Op til 3 års garanti
           = 2 år + 1 år ved registrering inden 30 dage. Dansk distributør: Texas

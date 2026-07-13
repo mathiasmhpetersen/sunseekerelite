@@ -82,7 +82,7 @@ export default function SizeSelector() {
           </h2>
           <p className="mt-4 text-[16.5px] leading-[1.55] text-ink-secondary">
             Vælg dit areal, så anbefaler vi den rigtige model i begge
-            generationer — kampagne-tilbuddet på Gen 1 og den nyeste Gen 2.
+            generationer — tilbuddet på Gen 1 og den nyeste Gen 2.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export default function SizeSelector() {
               <article className="flex flex-col rounded-3xl border-2 border-brand-orange-dark/40 bg-[#fff7ec] p-5 lg:p-6">
                 <div className="flex items-center justify-between gap-2">
                   <p className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-brand-orange-dark">
-                    Kampagne · Gen 1
+                    Tilbud · Gen 1
                   </p>
                   <span className="rounded-full bg-brand-gradient px-2 py-0.5 text-[10px] font-bold text-white">
                     SPAR {gen1.spar}
@@ -173,7 +173,7 @@ export default function SizeSelector() {
             ) : (
               <article className="flex flex-col justify-center rounded-3xl border border-dashed border-line-subtle bg-[#faf7f1] p-5 lg:p-6">
                 <p className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-ink-tertiary">
-                  Sommerkampagne
+                  Sommertilbud
                 </p>
                 <p className="mt-3 text-[14px] leading-[1.55] text-ink-secondary">
                   Sommertilbuddet på Gen 1 starter ved X5 (op til 2.000 m²). Til

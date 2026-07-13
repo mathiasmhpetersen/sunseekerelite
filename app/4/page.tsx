@@ -12,7 +12,6 @@ import DecisionResolver from "./_components/DecisionResolver";
 import ComparisonTable from "./_components/ComparisonTable";
 import FeatureSection from "./_components/FeatureSection";
 import StatRow from "./_components/StatRow";
-import BoxContentsSection from "./_components/BoxContentsSection";
 import ReviewsCarousel from "./_components/ReviewsCarousel";
 import Faq from "./_components/Faq";
 import FinalCta from "./_components/FinalCta";
@@ -20,12 +19,12 @@ import SiteFooter from "./_components/SiteFooter";
 
 export const metadata: Metadata = {
   title:
-    "Sunseeker X-serien — Sommerkampagne 2026 | spar op til 6.000 kr. (Gen 1)",
+    "Sunseeker X-serien — Sommertilbud 2026 | spar op til 6.000 kr. (Gen 1)",
   description:
     "Sommertilbud på Sunseeker X5, X7 og X7 Plus (Gen 1) — fra 9.999 kr. Kabelfri kortlægning via app, AWD-skråninger op til 70%. Sammenlign Gen 1 og Gen 2 og find din forhandler. Frem til 31. august 2026.",
   robots: { index: false, follow: false },
   openGraph: {
-    title: "Sunseeker X-serien — Sommerkampagne 2026",
+    title: "Sunseeker X-serien — Sommertilbud 2026",
     description:
       "Spar op til 6.000 kr. på Gen 1 (X5 / X7 / X7 Plus). Kabelfri robotplæneklippere fra 9.999 kr. Frem til 31. august 2026.",
     type: "website",
@@ -52,7 +51,7 @@ export default function Page() {
         {/* 2 — Trust bar */}
         <TrustStrip />
 
-        {/* 3 — Vælg din kampagnemodel */}
+        {/* 3 — Vælg din tilbudsmodel */}
         <CampaignModels />
 
         {/* 4 — The ladder */}
@@ -152,8 +151,6 @@ export default function Page() {
             overlayValue: "< 1 time",
           }}
         />
-
-        <BoxContentsSection />
 
         {/* 10 — Reviews */}
         <ReviewsCarousel />

@@ -50,12 +50,12 @@ const landingpages: Landingpage[] = [
     hook: "“Ledningsfri. Antennefri. Bygget til hele haven.”",
   },
   {
-    title: "Sommerkampagne (Gen 1)",
+    title: "Sommertilbud (Gen 1)",
     slug: "4",
     url: "www.sunseekerelite-anmeldelse.dk/4",
     status: "draft",
     description:
-      "Sommerkampagne-side der leder med Gen 1-tilbuddet (X5 / X7 / X7 Plus fra 9.999 kr., spar op til 6.000). Værdistige, havestørrelse-vælger, ærlig Gen 1 vs Gen 2-sammenligning, fuld 6-kolonne spec-tabel, countdown til 31. august og én CTA: Find din forhandler.",
+      "Sommertilbud-side der leder med Gen 1-tilbuddet (X5 / X7 / X7 Plus fra 9.999 kr., spar op til 6.000). Værdistige, havestørrelse-vælger, ærlig Gen 1 vs Gen 2-sammenligning, fuld 6-kolonne spec-tabel, countdown til 31. august og én CTA: Find din forhandler.",
     hook: "“Kabelfri. Bygget til hele haven. Nu fra 9.999 kr.”",
   },
 ];

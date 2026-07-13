@@ -10,7 +10,7 @@ export default function AnnouncementBar() {
         <span aria-hidden="true">☀</span>
         <span>
           <span className="font-bold uppercase tracking-[0.08em]">
-            Sommerkampagne
+            Sommertilbud
           </span>{" "}
           — Spar op til 6.000 kr. på X-serien
           <span className="hidden sm:inline"> · Slutter 31. august</span>

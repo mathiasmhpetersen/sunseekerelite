@@ -60,7 +60,7 @@ export default function LadderSection() {
             Jo større model, jo mere sparer du
           </h2>
           <p className="mt-5 text-[16.5px] leading-[1.6] text-white/75">
-            Kun 4.000 kr. skiller hvert trin — og kampagnen giver størst rabat
+            Kun 4.000 kr. skiller hvert trin — og tilbuddet giver størst rabat
             på den største model.
           </p>
         </div>

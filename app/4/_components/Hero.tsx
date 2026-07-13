@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="relative mx-auto grid max-w-content gap-10 px-5 pb-16 pt-12 md:grid-cols-2 md:items-center md:gap-8 md:pb-24 md:pt-16 lg:gap-14 lg:px-8 lg:pb-28 lg:pt-20">
         <div className="md:order-1">
           <p className="text-[11.5px] font-semibold uppercase tracking-[0.16em] text-brand-orange-dark">
-            Sommerkampagne 2026
+            Sommertilbud 2026
           </p>
           <h1
             className="mt-5 text-balance font-sans font-bold leading-[1.05] tracking-[-0.02em] text-white"
@@ -52,7 +52,7 @@ export default function Hero() {
               href="#kampagne"
               className="inline-flex items-center justify-center rounded-full border border-white/25 px-6 py-3.5 text-[15px] font-semibold text-white/90 transition hover:border-white hover:bg-white/5"
             >
-              Se kampagnemodellerne
+              Se tilbudsmodellerne
             </a>
           </div>
 
