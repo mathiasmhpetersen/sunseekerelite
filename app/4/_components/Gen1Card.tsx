@@ -85,6 +85,13 @@ export default function Gen1Card({ model }: { model: Gen1Model }) {
           >
             Find forhandler
           </a>
+          <a
+            href="#generationer"
+            className="mt-3 flex items-center justify-center gap-1 text-[12.5px] font-semibold text-ink-secondary transition hover:text-brand-orange-dark"
+          >
+            Findes også som Gen 2 — nyeste generation
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </article>

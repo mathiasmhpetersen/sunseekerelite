@@ -15,7 +15,13 @@ export const CAMPAIGN_DEADLINE_ISO = "2026-08-31T23:59:59+02:00";
 export const CAMPAIGN_DEADLINE_LABEL = "31. august 2026";
 
 export type Gen1Id = "x5" | "x7" | "x7plus";
-export type Gen2Id = "x5g2" | "x7g2" | "x7plusg2";
+// The three Gen 2 models that pair 1:1 with a Gen 1 campaign model.
+export type CoreGen2Id = "x5g2" | "x7g2" | "x7plusg2";
+// X3 Gen 2 is the entry Gen 2 model — no Gen 1 campaign counterpart, and it
+// differs from the core Gen 2s (dagtilstand only, forhjulstræk). Sourced from /3.
+export type Gen2Id = CoreGen2Id | "x3g2";
+// Columns that share the simple "Gen 1 value / Gen 2 value" pattern (the 6 pairs).
+export type CoreColId = Gen1Id | CoreGen2Id;
 export type ColId = Gen1Id | Gen2Id;
 
 /** Ribbon shown on a Gen 1 campaign card. */
@@ -113,6 +119,13 @@ export type Gen2Model = {
 
 export const gen2Models: Gen2Model[] = [
   {
+    id: "x3g2",
+    name: "Sunseeker X3 Gen 2",
+    area: "op til 800 m²",
+    pris: "7.999 kr.",
+    image: "/x3_gen_2-id.png",
+  },
+  {
     id: "x5g2",
     name: "Sunseeker X5 Gen 2",
     area: "op til 2.000 m²",
@@ -191,6 +204,7 @@ export const columnOrder: ColId[] = [
   "x5",
   "x7",
   "x7plus",
+  "x3g2",
   "x5g2",
   "x7g2",
   "x7plusg2",
@@ -199,6 +213,13 @@ export const columnOrder: ColId[] = [
 export type SpecRow = {
   label: string;
   values: Record<ColId, string>;
+};
+
+// The six paired columns are authored here; X3 Gen 2 is grafted on afterwards
+// (see x3g2Values below) so its many differences live in one place.
+type BaseSpecRow = {
+  label: string;
+  values: Record<CoreColId, string>;
 };
 
 export type SpecGroup = {
@@ -269,8 +290,8 @@ export const specGroups: SpecGroup[] = [
   },
 ];
 
-// Helper to build a row where all six columns share one value.
-const all = (v: string): Record<ColId, string> => ({
+// Helper to build a row where all six paired columns share one value.
+const all = (v: string): Record<CoreColId, string> => ({
   x5: v,
   x7: v,
   x7plus: v,
@@ -280,7 +301,7 @@ const all = (v: string): Record<ColId, string> => ({
 });
 
 // Helper for the common "Gen 1 value" / "Gen 2 value" split.
-const byGen = (g1: string, g2: string): Record<ColId, string> => ({
+const byGen = (g1: string, g2: string): Record<CoreColId, string> => ({
   x5: g1,
   x7: g1,
   x7plus: g1,
@@ -289,7 +310,7 @@ const byGen = (g1: string, g2: string): Record<ColId, string> => ({
   x7plusg2: g2,
 });
 
-export const specRows: SpecRow[] = [
+const baseSpecRows: BaseSpecRow[] = [
   {
     label: "Maks. areal",
     values: {
@@ -513,6 +534,57 @@ export const specRows: SpecRow[] = [
   },
 ];
 
+// X3 Gen 2 — the entry Gen 2 model. Values transcribed from the /3 spec grid;
+// it is a Gen 2 (AONavi 2.0) but WITHOUT night vision/iToF, and is forhjulstræk.
+// Universal smart features (regnsensor, FOTA, app-styring, virtuelle grænser
+// osv.) are standard across the Elite Gen 2 platform, so marked ✓. Anything not
+// confidently sourced is left conservative ("–"). Keyed by row label.
+const x3g2Values: Record<string, string> = {
+  "Maks. areal": "800 m²",
+  Teknologi: "AONavi 2.0 (nRTK+VSLAM) + Vision AI",
+  Synstilstand: "Dagtilstand",
+  Kamera: "Binokulær",
+  Forhindringsundgåelse: "Vision AI + kofanger",
+  Nattilstand: "–",
+  Klippebredde: "20 cm",
+  Klippehøjde: "20–60 mm",
+  Højdejustering: "Manuel",
+  Knive: "3 knive",
+  Klippehastighed: "Max 0,45 m/s",
+  "Adaptiv klippedisk": "✓",
+  "Kantklip over grænsen": "✓",
+  Kantklipper: "✓",
+  "Klipning i flere vinkler": "–",
+  Drev: "Forhjulstræk",
+  "Maks. hældning": "30% / 17°",
+  Affjedring: "–",
+  "Bevægelig kofanger": "✓",
+  Batteri: "5 Ah",
+  Oplader: "2 A",
+  Vandtæthed: "IPX5",
+  "Modul + tyverisikring": "nRTK 4G (24 mdr inkl.)",
+  Forbindelse: "Wifi/Bluetooth/4G",
+  "Super WiFi (LoRa)": "–",
+  "Multi-zoner": "Ingen grænse",
+  Regnsensor: "✓",
+  "Trådløs opdatering (FOTA)": "✓",
+  "Alexa / Google Home": "✓",
+  Lydniveau: "60 dB(A)",
+  Display: "LED",
+  "Automatisk kortlægning": "✓",
+  Ruteplanlægning: "Intelligent",
+  "LED-forlygte": "–",
+  Hjulbørster: "–",
+  "Virtuelle grænser": "✓",
+  "Planlægning af klippetider": "✓",
+};
+
+// Final rows = the six paired columns + the grafted X3 Gen 2 column.
+export const specRows: SpecRow[] = baseSpecRows.map((r) => ({
+  label: r.label,
+  values: { ...r.values, x3g2: x3g2Values[r.label] ?? "–" },
+}));
+
 // Column header meta for the comparison table (price shown per column).
 export type ColumnMeta = {
   id: ColId;
@@ -553,6 +625,14 @@ export const columns: ColumnMeta[] = [
     gen: 1,
     foer: "23.999",
     price: "17.999 kr.",
+  },
+  {
+    id: "x3g2",
+    name: "X3 Gen 2",
+    area: "op til 800 m²",
+    image: "/x3_gen_2-id.png",
+    gen: 2,
+    price: "7.999 kr.",
   },
   {
     id: "x5g2",

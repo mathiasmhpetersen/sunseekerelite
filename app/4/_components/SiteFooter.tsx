@@ -8,9 +8,6 @@ export default function SiteFooter() {
         <div className="flex flex-col gap-8 border-b border-white/10 pb-10 md:flex-row md:items-center md:justify-between">
           <div className="flex items-center gap-3">
             <SunseekerLogo height={22} />
-            <span className="text-[13px] text-white/55">
-              Elite X-serien — Sommerkampagne 2026
-            </span>
           </div>
           <a
             href={DEALER_URL}

@@ -32,26 +32,16 @@ const ITEMS: Item[] = [
       </>
     ),
   },
-  {
-    label: "Dansk distributør — Texas A/S",
-    icon: (
-      <>
-        <path d="M3 21h18" />
-        <path d="M5 21V8l7-4 7 4v13" />
-        <path d="M9 21v-5h6v5" />
-      </>
-    ),
-  },
 ];
 
 export default function TrustStrip() {
   return (
     <section className="bg-[#fff7ec] text-ink-primary">
       <div className="mx-auto max-w-content px-5 py-6 lg:px-8 lg:py-7">
-        <ul className="grid grid-cols-2 gap-x-6 gap-y-3 md:grid-cols-4">
+        <ul className="flex flex-col items-center gap-x-10 gap-y-3 sm:flex-row sm:flex-wrap sm:justify-center">
           {ITEMS.map((it) => {
             const inner = (
-              <span className="flex items-start gap-2.5 text-[13px] font-medium leading-[1.35] text-ink-primary">
+              <span className="flex items-center gap-2.5 text-[13px] font-medium leading-[1.35] text-ink-primary">
                 <svg
                   width="18"
                   height="18"
