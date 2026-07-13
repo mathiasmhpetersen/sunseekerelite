@@ -9,8 +9,8 @@ import {
 
 const rowsByLabel = new Map(specRows.map((r) => [r.label, r]));
 
-// 180px label column + 6 model columns.
-const GRID = "grid-cols-[180px_repeat(6,minmax(140px,1fr))]";
+// Label column + 7 model columns (3 Gen 1 kampagne + 4 Gen 2, incl. X3 Gen 2).
+const GRID = "grid-cols-[168px_repeat(7,minmax(122px,1fr))]";
 
 export default function ComparisonTable() {
   return (
@@ -27,13 +27,13 @@ export default function ComparisonTable() {
             Sammenlign hele serien
           </h2>
           <p className="mt-4 text-[16.5px] leading-[1.55] text-ink-secondary">
-            Alle seks modeller side om side — Gen 1 på sommertilbud og Gen 2 i
-            nyeste generation.
+            Hele serien side om side — Gen 1 på sommertilbud og hele Gen 2-serien
+            (inkl. X3 Gen 2 til mindre haver) i nyeste generation.
           </p>
         </div>
 
         <div className="mt-12 overflow-x-auto">
-          <div className="min-w-[1080px]">
+          <div className="min-w-[1200px]">
             {/* Sticky model header */}
             <div
               className={`sticky top-[92px] z-20 -mx-1 grid ${GRID} gap-2 rounded-2xl border border-line-subtle bg-white/90 p-3 shadow-[0_8px_30px_rgba(10,10,10,0.05)] backdrop-blur md:top-[100px]`}
@@ -203,8 +203,9 @@ export default function ComparisonTable() {
           Priser er vejledende udsalgspriser inkl. moms og kan variere mellem
           forhandlere. Kampagnepriser gælder Gen 1 (X5 / X7 / X7 Plus) frem til
           31. august 2026, så længe lager haves. Gen 1 kører i dagtilstand;
-          nat-syn, iToF og inkluderet tyverisikring er Gen 2. På X5 og X7 (Gen
-          1) er 4G-modul + tyverisikring et tilkøb.
+          nat-syn, iToF og inkluderet tyverisikring er Gen 2 (X5 / X7 / X7 Plus).
+          Entry-modellen X3 Gen 2 er dog dagdrift uden nat-syn/iToF. På X5 og X7
+          (Gen 1) er 4G-modul + tyverisikring et tilkøb.
         </p>
       </div>
     </section>

@@ -56,6 +56,14 @@ export default function Hero() {
             </a>
           </div>
 
+          <a
+            href="#generationer"
+            className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-brand-orange-light transition hover:text-white"
+          >
+            Vil du have nyeste generation? Se Gen 2
+            <span aria-hidden="true">→</span>
+          </a>
+
           <p className="mt-5 text-[13.5px] font-medium text-white/85">
             Fra <span className="font-bold text-white">9.999 kr.</span>{" "}
             <span className="text-white/55">inkl. moms</span>

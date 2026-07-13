@@ -14,7 +14,6 @@ import FeatureSection from "./_components/FeatureSection";
 import StatRow from "./_components/StatRow";
 import BoxContentsSection from "./_components/BoxContentsSection";
 import ReviewsCarousel from "./_components/ReviewsCarousel";
-import TrustFactsStrip from "./_components/TrustFactsStrip";
 import Faq from "./_components/Faq";
 import FinalCta from "./_components/FinalCta";
 import SiteFooter from "./_components/SiteFooter";
@@ -98,8 +97,8 @@ export default function Page() {
           body="Vision AI bruger et binokulært kamera til at genkende op til 200 objekttyper — fra havemøbler og legetøj til træer og bede — og styrer robotten uden om. På Gen 1 fungerer forhindringsundgåelsen i dagtilstand."
           note="* Gen 1 er dagdrift. Vil du have forhindringsundgåelse dag OG nat med iToF-kamera? Se Gen 2."
           image={{
-            src: "/vision-ai-obstacle.jpg",
-            alt: "Sunseeker X detekterer forhindringer med Vision AI",
+            src: "/gen2/x7-gen2-navigation.jpg",
+            alt: "Sunseeker X7 kører tæt forbi et bed uden at ramme planterne",
             overlayLabel: "Objekttyper",
             overlayValue: "200+",
           }}
@@ -112,8 +111,8 @@ export default function Page() {
           title="Bygget til rigtige haver"
           body="Med all-wheel drive og baghjulsstyring håndterer X7 og X7 Plus skråninger op til 70% (35°), vådt græs, rødder og ujævn jord. X5 klarer op til 60% (30°). Forhjulsaffjedring holder klippeskjoldet plant, så klippehøjden forbliver ensartet — uden skalpering på toppe og kanter."
           image={{
-            src: "/terrain-climbing.jpg",
-            alt: "Sunseeker X kører op ad en stejl skråning",
+            src: "/gen2/x7-gen2-slope.jpg",
+            alt: "Sunseeker X7 kører op ad en græsklædt skråning",
             overlayLabel: "Maks. hældning",
             overlayValue: "70% / 35°",
           }}
@@ -137,7 +136,7 @@ export default function Page() {
           title="Rene baner helt ud til kanten"
           body="Robotten klipper rent helt ud til kanter og hegn, så der ikke står uklippede strimler tilbage. Den flydende skæreskive justerer klippehøjden midt på ruten og minimerer skalpering på ujævne overflader. X7 og X7 Plus klipper 35 cm bredt med dobbelt knivdisk for hurtigere dækning på store plæner."
           note="* Klippebredde og skæreskive varierer pr. model (22–35 cm)."
-          video={{ src: "/klippekvalitet.mp4" }}
+          video={{ src: "/klip-0713.mp4" }}
           reverse
         />
 
@@ -159,10 +158,7 @@ export default function Page() {
         {/* 10 — Reviews */}
         <ReviewsCarousel />
 
-        {/* 11 — Trust facts */}
-        <TrustFactsStrip />
-
-        {/* 12 — FAQ */}
+        {/* 11 — FAQ */}
         <Faq />
 
         {/* 13 — Final CTA */}

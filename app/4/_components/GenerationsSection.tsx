@@ -55,6 +55,30 @@ export default function GenerationsSection() {
           </p>
         </div>
 
+        {/* Real Gen 2 proof shot — the LED light bar running at night. */}
+        <figure className="relative mt-8 aspect-[16/9] w-full overflow-hidden rounded-3xl bg-black md:aspect-[21/9]">
+          <Image
+            src="/gen2/x5-gen2-night.jpg"
+            alt="Sunseeker X5 Gen 2 klipper i haven om natten med tændt LED-lysbjælke"
+            fill
+            sizes="(max-width: 768px) 90vw, 1080px"
+            className="object-cover"
+          />
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"
+          />
+          <figcaption className="absolute inset-x-5 bottom-4 md:inset-x-7 md:bottom-6">
+            <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-brand-orange-light">
+              Gen 2 · kører også om natten
+            </p>
+            <p className="mt-1 max-w-[520px] text-[14px] font-medium leading-[1.4] text-white/90">
+              iToF-kamera og nat-syn lader Gen 2 klippe efter mørkets frembrud.
+              Gen 1 kører i dagtilstand.
+            </p>
+          </figcaption>
+        </figure>
+
         {/* Model toggle */}
         <div
           role="tablist"
@@ -132,8 +156,8 @@ export default function GenerationsSection() {
               <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-orange-light">
                 Gen 2 · Nyeste generation
               </p>
-              <span className="rounded-full border border-brand-orange-dark/50 bg-brand-orange-dark/15 px-2.5 py-1 text-[10.5px] font-bold text-brand-orange-light">
-                {pair.delta}
+              <span className="rounded-full border border-brand-orange-dark/50 bg-brand-orange-dark/15 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-brand-orange-light">
+                Anbefalet
               </span>
             </div>
             <div className="relative mt-4 aspect-[5/4] w-full overflow-hidden rounded-2xl bg-[radial-gradient(120%_90%_at_50%_30%,#2a2018_0%,#0f0b08_100%)]">
@@ -155,7 +179,7 @@ export default function GenerationsSection() {
               {g2.pris}
             </p>
             <p className="mt-2 text-[13px] font-semibold text-brand-orange-light">
-              {pair.delta} giver dig:
+              Det får du med Gen 2:
             </p>
             <ul className="mt-3 flex-1 space-y-2 text-[14px] leading-[1.45] text-white/80">
               {upgrades.map((u) => (

@@ -1,5 +1,3 @@
-import { DEALER_URL } from "../_lib/campaign";
-
 type Profile = {
   eyebrow: string;
   title: string;
@@ -61,19 +59,6 @@ export default function DecisionResolver() {
               </p>
             </article>
           ))}
-        </div>
-
-        <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-          <p className="text-[15.5px] leading-[1.55] text-ink-secondary">
-            Begge er kabelfri. Der findes ikke et forkert valg — kun det rigtige
-            til din have.
-          </p>
-          <a
-            href={DEALER_URL}
-            className="inline-flex shrink-0 items-center justify-center rounded-full bg-brand-gradient px-6 py-3 text-[14px] font-semibold text-white transition hover:brightness-110"
-          >
-            Find din forhandler →
-          </a>
         </div>
       </div>
     </section>

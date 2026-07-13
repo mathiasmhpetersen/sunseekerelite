@@ -2,15 +2,21 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import type { Gen1Model } from "../_lib/campaign";
-import { DEALER_URL, SILVER_FILTER, gen1Models } from "../_lib/campaign";
+import type { Gen1Model, Gen2Model, GenPair } from "../_lib/campaign";
+import {
+  DEALER_URL,
+  SILVER_FILTER,
+  gen1Models,
+  gen2Models,
+  genPairs,
+} from "../_lib/campaign";
 
 type SizeKey = "under2000" | "2000to3000" | "3000to6000";
 
 type Option = {
   key: SizeKey;
   label: string;
-  modelId: "x5" | "x7" | "x7plus";
+  gen1Id: "x5" | "x7" | "x7plus";
   helper?: string;
 };
 
@@ -18,24 +24,30 @@ const OPTIONS: Option[] = [
   {
     key: "under2000",
     label: "Under 2.000 m²",
-    modelId: "x5",
+    gen1Id: "x5",
     helper:
-      "Har du en mindre have end 2.000 m²? X5 er stadig det rigtige valg — eller spørg din forhandler om X3.",
+      "Har du en helt lille have (under 800 m²)? Så er X3 Gen 2 — nyeste generation, op til 800 m² — fra 7.999 kr. et oplagt valg. Spørg din forhandler.",
   },
   {
     key: "2000to3000",
     label: "2.000–3.000 m²",
-    modelId: "x7",
+    gen1Id: "x7",
   },
   {
     key: "3000to6000",
     label: "3.000–6.000 m²",
-    modelId: "x7plus",
+    gen1Id: "x7plus",
   },
 ];
 
-const modelsById: Record<string, Gen1Model> = Object.fromEntries(
+const gen1ById: Record<string, Gen1Model> = Object.fromEntries(
   gen1Models.map((m) => [m.id, m]),
+);
+const gen2ById: Record<string, Gen2Model> = Object.fromEntries(
+  gen2Models.map((m) => [m.id, m]),
+);
+const pairByGen1: Record<string, GenPair> = Object.fromEntries(
+  genPairs.map((p) => [p.gen1, p]),
 );
 
 export default function SizeSelector() {
@@ -43,7 +55,9 @@ export default function SizeSelector() {
   const [selected, setSelected] = useState<SizeKey>("under2000");
 
   const option = OPTIONS.find((o) => o.key === selected)!;
-  const model = modelsById[option.modelId];
+  const gen1 = gen1ById[option.gen1Id];
+  const pair = pairByGen1[option.gen1Id];
+  const gen2 = gen2ById[pair.gen2];
 
   return (
     <section
@@ -59,12 +73,12 @@ export default function SizeSelector() {
             Hvor stor er din plæne?
           </h2>
           <p className="mt-4 text-[16.5px] leading-[1.55] text-ink-secondary">
-            Vælg dit areal, så anbefaler vi den rigtige model — matchet til dit
-            behov, ikke den dyreste.
+            Vælg dit areal, så anbefaler vi den rigtige model i begge
+            generationer — kampagne-tilbuddet på Gen 1 og den nyeste Gen 2.
           </p>
         </div>
 
-        <div className="mt-10 grid gap-8 md:grid-cols-[1fr_1fr] md:items-center lg:gap-12">
+        <div className="mt-10 grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-start lg:gap-12">
           <div>
             <div
               role="radiogroup"
@@ -105,54 +119,101 @@ export default function SizeSelector() {
                 );
               })}
             </div>
-          </div>
-
-          <div className="rounded-3xl border border-line-subtle bg-[#faf7f1] p-6 lg:p-8">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brand-orange-dark">
-              Vores anbefaling
-            </p>
-            <div className="mt-4 flex items-center gap-5">
-              <div className="relative h-24 w-28 shrink-0 overflow-hidden rounded-2xl bg-[radial-gradient(120%_90%_at_50%_30%,#f4f6f8_0%,#e3e8ec_100%)]">
-                <Image
-                  src={model.image}
-                  alt={model.name}
-                  fill
-                  sizes="112px"
-                  className="object-contain p-2"
-                  style={{ filter: SILVER_FILTER }}
-                />
-              </div>
-              <div>
-                <h3 className="text-[22px] font-bold leading-tight tracking-[-0.01em] text-ink-primary">
-                  {model.name}
-                </h3>
-                <p className="text-[13px] text-ink-secondary">{model.area}</p>
-                <p
-                  className="mt-1 text-[22px] font-bold leading-none tracking-[-0.01em] text-ink-primary"
-                  style={{ fontVariantNumeric: "tabular-nums" }}
-                >
-                  {model.nu}
-                  <span className="ml-2 align-middle text-[13px] font-medium text-ink-tertiary line-through">
-                    {model.foer}
-                  </span>
-                </p>
-              </div>
-            </div>
 
             {option.helper && (
               <p className="mt-5 text-[13.5px] leading-[1.5] text-ink-secondary">
                 {option.helper}
               </p>
             )}
+          </div>
 
-            <a
-              href={DEALER_URL}
-              className="mt-6 flex w-full items-center justify-center rounded-full bg-brand-gradient px-4 py-3 text-[14px] font-semibold text-white transition hover:brightness-110"
-            >
-              Find forhandler
-            </a>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {/* Gen 1 — campaign recommendation */}
+            <article className="flex flex-col rounded-3xl border-2 border-brand-orange-dark/40 bg-[#fff7ec] p-5 lg:p-6">
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-brand-orange-dark">
+                  Kampagne · Gen 1
+                </p>
+                <span className="rounded-full bg-brand-gradient px-2 py-0.5 text-[10px] font-bold text-white">
+                  SPAR {gen1.spar}
+                </span>
+              </div>
+              <div className="relative mt-3 h-28 w-full overflow-hidden rounded-2xl bg-[radial-gradient(120%_90%_at_50%_30%,#f1f4f6_0%,#e0e5e9_100%)]">
+                <Image
+                  src={gen1.image}
+                  alt={gen1.name}
+                  fill
+                  sizes="(max-width: 640px) 90vw, 240px"
+                  className="object-contain p-3"
+                  style={{ filter: SILVER_FILTER }}
+                />
+              </div>
+              <h3 className="mt-4 text-[18px] font-bold leading-tight tracking-[-0.01em] text-ink-primary">
+                {gen1.name}
+              </h3>
+              <p className="text-[12.5px] text-ink-secondary">
+                {gen1.area} · dagdrift
+              </p>
+              <p
+                className="mt-2 text-[22px] font-bold leading-none tracking-[-0.01em] text-ink-primary"
+                style={{ fontVariantNumeric: "tabular-nums" }}
+              >
+                {gen1.nu}
+                <span className="ml-1.5 align-middle text-[12px] font-medium text-ink-tertiary line-through">
+                  {gen1.foer}
+                </span>
+              </p>
+              <a
+                href={DEALER_URL}
+                className="mt-4 flex w-full items-center justify-center rounded-full bg-brand-gradient px-4 py-2.5 text-[13.5px] font-semibold text-white transition hover:brightness-110"
+              >
+                Find forhandler
+              </a>
+            </article>
+
+            {/* Gen 2 — newest generation recommendation */}
+            <article className="flex flex-col rounded-3xl border border-line-subtle bg-[#faf7f1] p-5 lg:p-6">
+              <div className="flex items-center justify-between gap-2">
+                <p className="text-[10.5px] font-semibold uppercase tracking-[0.12em] text-ink-secondary">
+                  Nyeste generation · Gen 2
+                </p>
+              </div>
+              <div className="relative mt-3 h-28 w-full overflow-hidden rounded-2xl bg-[radial-gradient(120%_90%_at_50%_30%,#f7f4ee_0%,#efeae0_100%)]">
+                <Image
+                  src={gen2.image}
+                  alt={gen2.name}
+                  fill
+                  sizes="(max-width: 640px) 90vw, 240px"
+                  className="object-contain p-3"
+                />
+              </div>
+              <h3 className="mt-4 text-[18px] font-bold leading-tight tracking-[-0.01em] text-ink-primary">
+                {gen2.name}
+              </h3>
+              <p className="text-[12.5px] text-ink-secondary">
+                {gen2.area} · nat-syn + iToF
+              </p>
+              <p
+                className="mt-2 text-[22px] font-bold leading-none tracking-[-0.01em] text-ink-primary"
+                style={{ fontVariantNumeric: "tabular-nums" }}
+              >
+                {gen2.pris}
+              </p>
+              <a
+                href={DEALER_URL}
+                className="mt-4 flex w-full items-center justify-center rounded-full border border-ink-primary/15 bg-white px-4 py-2.5 text-[13.5px] font-semibold text-ink-primary transition hover:border-ink-primary"
+              >
+                Find forhandler
+              </a>
+            </article>
           </div>
         </div>
+
+        <p className="mt-8 max-w-[720px] text-[13px] leading-[1.55] text-ink-tertiary">
+          Begge generationer er kabelfri og passer samme areal. Gen 1 er på
+          sommertilbud og kører i dagtilstand; Gen 2 er nyeste generation med
+          nat-syn, iToF-kamera og inkluderet tyverisikring.
+        </p>
       </div>
     </section>
   );
