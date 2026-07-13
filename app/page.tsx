@@ -49,6 +49,15 @@ const landingpages: Landingpage[] = [
       "Klassisk produktside for hele X Gen 2-serien (X3 / X5 / X7 / X7 Plus). Modelvælger med danske priser, AONavi 2.0, Vision AI 2.0, AWD-skråninger, fuld specifikationstabel og forhandler-CTA.",
     hook: "“Ledningsfri. Antennefri. Bygget til hele haven.”",
   },
+  {
+    title: "Sommerkampagne (Gen 1)",
+    slug: "4",
+    url: "www.sunseekerelite-anmeldelse.dk/4",
+    status: "draft",
+    description:
+      "Sommerkampagne-side der leder med Gen 1-tilbuddet (X5 / X7 / X7 Plus fra 9.999 kr., spar op til 6.000). Værdistige, havestørrelse-vælger, ærlig Gen 1 vs Gen 2-sammenligning, fuld 6-kolonne spec-tabel, countdown til 31. august og én CTA: Find din forhandler.",
+    hook: "“Kabelfri. Bygget til hele haven. Nu fra 9.999 kr.”",
+  },
 ];
 
 const statusLabel: Record<Status, string> = {
